@@ -3,10 +3,10 @@ An Android application which shows Popular, Now Playing, Top Rated and Upcoming 
 
 #Screenshots
 <table>
-	<td><img src="https://github.com/KeshavAggarwal/Movies-TVShows-Android-App/blob/master/screenshots/Screen%20shot%201.png"></td>
+	<tr><td><img src="https://github.com/KeshavAggarwal/Movies-TVShows-Android-App/blob/master/screenshots/Screen%20shot%201.png"></td>
 	<td><img src="https://github.com/KeshavAggarwal/Movies-TVShows-Android-App/blob/master/screenshots/Screen%20shot%202.png"></td>
-	<td><img src="https://github.com/KeshavAggarwal/Movies-TVShows-Android-App/blob/master/screenshots/Screen%20shot%203.png"></td>
-	<td><img src="https://github.com/KeshavAggarwal/Movies-TVShows-Android-App/blob/master/screenshots/Screen%20shot%204.png"></td>
+	<td><img src="https://github.com/KeshavAggarwal/Movies-TVShows-Android-App/blob/master/screenshots/Screen%20shot%203.png"></td></tr>
+	<tr><td><img src="https://github.com/KeshavAggarwal/Movies-TVShows-Android-App/blob/master/screenshots/Screen%20shot%204.png"></td>
 	<td><img src="https://github.com/KeshavAggarwal/Movies-TVShows-Android-App/blob/master/screenshots/Screen%20shot%205.png"></td>
-	<td><img src="https://github.com/KeshavAggarwal/Movies-TVShows-Android-App/blob/master/screenshots/Screen%20shot%206.png"></td>
+	<td><img src="https://github.com/KeshavAggarwal/Movies-TVShows-Android-App/blob/master/screenshots/Screen%20shot%206.png"></td></tr>
 </table>
