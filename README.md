@@ -3,7 +3,7 @@ An Android application which shows Popular, Now Playing, Top Rated and Upcoming 
 
 #Screenshots
 <table>
-	<td><img src="https://raw.githubusercontent.com/KeshavAggarwal/Movies-TVShows-Android-App/screenshots/Screen Shot 2017-03-21 at 10.25.05 PM.png"></td>
+	<td><img src="https://github.com/KeshavAggarwal/Movies-TVShows-Android-App/blob/master/screenshots/Screen%20shot%201.png"></td>
 	<td><img src="https://raw.githubusercontent.com/KeshavAggarwal/Movies-TVShows-Android-App/screenshots/Screen Shot 2017-03-21 at 10.25.52 PM.png"></td>
 	<td><img src="https://raw.githubusercontent.com/KeshavAggarwal/Movies-TVShows-Android-App/screenshots/Screen Shot 2017-03-21 at 10.31.39 PM.png"></td>
 	<td><img src="https://raw.githubusercontent.com/KeshavAggarwal/Movies-TVShows-Android-App/screenshots/Screen Shot 2017-03-21 at 10.33.06 PM.png"></td>
