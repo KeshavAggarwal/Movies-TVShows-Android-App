@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.1_c9a956f25049aa418ef844f2419b703d88f93d01.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c5e6490573cd2cc8018417f60ddd251138b6ed61">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-24.2.1_542a0021ee0ac0be4a2db61365e8c47dd8a303ac.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_a75c94269abdc44686c4a532931d43f1b0591640.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/palette-v7/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="3b7105277df9a8013468215c451ddefac2499d3a">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/com.android.support-palette-v7-24.2.1_162f2fbe1a839813fd7cc94de8a7e117aa4ddde0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/picasso-2.5.2_e0bb1086b69e4193f7227462c0d2e638bbaf9880.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/design/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/com.android.support-design-24.2.1_ce97b11cbdfedb0f2b5926652d3caf7af74442af.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/com.android.support-recyclerview-v7-24.2.1_804f965bf4c281f1ebd2bb6459807d2ddf5cf1ad.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-24.2.1_e675e5bcb832ae3b6aafe285cd413d1b453e1744.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.1.0/aa557d71ead91cbf26e0c316a0f593d168303309/converter-gson-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="aa557d71ead91cbf26e0c316a0f593d168303309">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/converter-gson-2.1.0_852add0d0f32ef80b192d1b15fb47fb6dc60083d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.1.0/2de7cd8b95b7021b1d597f049bcb422055119f2c/retrofit-2.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="2de7cd8b95b7021b1d597f049bcb422055119f2c">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/retrofit-2.1.0_67ed7f80985b12b97069ff8e0041e32e86fb391f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_ca8c6c8b7e1892a3c1d258040f42ab3f5eb128a5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_17ee21645cde1e18c84eb4541ec3f8916497a167.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_5bf0aa8588e109bf1a470028c199157a479bd69f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_c5a18aced41e20df26ffe19dfb4a20332fd75a97.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/2.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/de.hdodenhof-circleimageview-2.1.0_5640fa97e0bae8afaa1c2d2518ea7bd9520440c6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.1_bec2d03c9e40ae63dc10a6848f37df68f3432868.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-24.2.1_0b5ec8353144f491435a727842f278e5cb8ae46a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/libs/YouTubeAndroidPlayerApi.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="3c4f96ff493456651cc7bdb0b47e10eb25545a16">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/YouTubeAndroidPlayerApi_6a1b292ecd5251da9843f2ccc34b86891417efaf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_4969b7caf91391965b49fcc198e677ddd7aba010.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.7/751f548c85fa49f330cecbb1875893f971b33c4e/gson-2.7.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="751f548c85fa49f330cecbb1875893f971b33c4e">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/gson-2.7_bd70c615da22d655f48da16f20f8619645cbc93d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-24.2.1_7884011c988539d9db2960f6abf9f09fb7590249.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.1_0da9cae5030372b6f5933ccd5c4b7ea007205ebf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.1_43f4da3b059b97e318220d4d67420e68f05f6ce7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.3.0/2b802460eea20f8f2ad9c08c74e0f14718e88aa9/okhttp-3.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="2b802460eea20f8f2ad9c08c74e0f14718e88aa9">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/okhttp-3.3.0_5164026fed7873e053fb2e3b65acff8f35caca93.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.8.0/5ea7af56cc7c567ed9856d99efb30740e9b17ff/okio-1.8.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="05ea7af56cc7c567ed9856d99efb30740e9b17ff">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/okio-1.8.0_453857def661a189b8f895d06bf562d8f427b3e7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.1_89c8e67870ccc539de3cb588c94595082ca95b9b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.1"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/Users/keshavaggarwal/Desktop/Movies/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.1_de66a9b51086970dbec9e60b8a43be631545f8f7.jar" />
+    </item>
+
+</items>

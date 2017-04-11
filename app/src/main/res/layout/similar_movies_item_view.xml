@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/similarMoviesCardView"
+    android:layout_width="140dp"
+    android:layout_height="300dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginBottom="16dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardCornerRadius="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/similarMoviesThumbnailImageView"
+            android:layout_width="match_parent"
+            android:transitionName="posterImageTransition"
+            android:layout_height="196dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/similarMoviesNameTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:layout_marginTop="5dp"
+            android:textSize="15dp"
+            android:paddingLeft="5dp"
+            android:layout_below="@+id/similarMoviesThumbnailImageView"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/similarMoviesReleaseDateTextView"
+            android:paddingLeft="5dp"
+            android:layout_below="@id/similarMoviesNameTextView"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/similarmoviesRatingTextView"
+            android:paddingLeft="4dp"
+            android:layout_alignParentBottom="true"
+            android:textColor="@android:color/black"
+            android:layout_marginBottom="5dp"
+            android:textSize="14dp"
+            android:drawablePadding="3dp"
+            android:drawableRight="@drawable/ic_star"/>
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

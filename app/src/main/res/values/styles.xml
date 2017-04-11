@@ -1,0 +1,46 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        Customize your theme here. -->
+        <item name="android:windowContentTransitions">true</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="AppTheme.Home">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowExitTransition">@transition/movie_exit</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.Search">
+        <item name="android:statusBarColor">#9E9E9E</item>
+    </style>
+
+    <!--<style name="SearchViewTheme">
+        <item name="android:colorControlActivated">?android:colorAccent</item>
+        <item name="android:searchViewStyle">@style/Base.Widget.AppCompat.SearchView</item>
+    </style>
+
+    <style name="Widget.AppCompat.SearchView." parent="android:style/Widget.Material.SearchView">
+        <item name="searchHintIcon">@android:color/transparent</item>
+        <item name="searchIcon">@android:color/transparent</item>
+    </style>
+-->
+
+</resources>

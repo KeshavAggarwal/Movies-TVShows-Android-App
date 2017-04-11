@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">MovieDB</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_main3">Main3Activity</string>
+    <string name="title_activity_about_tvshow">AboutTVShowActivity</string>
+    <string name="title_activity_see_all_tvshows">SeeAllTVShowsActivity</string>
+
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <style name="shared_element_transition_name">SharedElementTransition</style>
+
+</resources>

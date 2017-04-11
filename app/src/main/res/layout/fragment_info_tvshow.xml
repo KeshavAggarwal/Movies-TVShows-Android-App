@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/aboutTheTvShowTextViewLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="About the Show"
+            android:textSize="16dp"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/aboutTvShowTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+            android:layout_below="@+id/aboutTheTvShowTextViewLabel"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="5dp" />
+
+
+        <TextView
+            android:id="@+id/firstAirDateLabel"
+            android:layout_width="wrap_content"
+            android:textSize="16dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aboutTvShowTextView"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="15dp"
+            android:text="First Air Date:"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/firstAirDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/firstAirDateLabel"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/firstAirDateLabel" />
+
+        <TextView
+            android:id="@+id/lastAirDateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/firstAirDateLabel"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:textSize="16dp"
+            android:layout_marginTop="10dp"
+            android:text="Last Air Date:"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/lastAirDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/lastAirDateLabel"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/lastAirDateLabel" />
+
+        <TextView
+            android:id="@+id/createdByLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_below="@+id/lastAirDateLabel"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="10dp"
+            android:text="Created By:"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/createdByTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/createdByLabel"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/createdByLabel" />
+
+        <TextView
+            android:id="@+id/showTypeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createdByLabel"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="10dp"
+            android:textSize="16dp"
+            android:text="Show Type:"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/showTypeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/showTypeLabel"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/showTypeLabel" />
+
+        <TextView
+            android:id="@+id/showStatusLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_below="@+id/showTypeLabel"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="10dp"
+            android:text="Show Status:"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/showStatusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/showStatusLabel"
+            android:layout_marginLeft="5dp"
+            android:layout_toRightOf="@+id/showStatusLabel" />
+
+        <TextView
+            android:id="@+id/trailorsTvShowTextLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_below="@+id/showStatusLabel"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="20dp"
+            android:text="Trailors"
+            android:textColor="@android:color/black" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/trailorsTvShowRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trailorsTvShowTextLabel"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/trailorsTvShowTextLabel"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:visibility="invisible"
+            android:id="@+id/noTVTrailerTextView"/>
+
+    </RelativeLayout>
+</android.support.v4.widget.NestedScrollView>
