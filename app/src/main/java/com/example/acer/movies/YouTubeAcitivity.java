@@ -1,11 +1,9 @@
 package com.example.acer.movies;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 
-import com.example.acer.movies.Network.URLConstants;
+import com.example.acer.movies.network.URLConstants;
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
@@ -24,7 +22,6 @@ public class YouTubeAcitivity extends YouTubeBaseActivity implements YouTubePlay
 
         Intent intent = getIntent();
         key = intent.getStringExtra("VIDEO_KEY");
-        //Log.i("BEER", key);
     }
 
     @Override

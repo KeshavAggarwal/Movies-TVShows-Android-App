@@ -9,9 +9,13 @@ import android.support.v7.widget.Toolbar;
 import android.transition.Slide;
 import android.view.Gravity;
 
-import com.example.acer.movies.Network.ApiService;
-import com.example.acer.movies.Network.TVShowResponse;
-import com.example.acer.movies.Network.URLConstants;
+import com.example.acer.movies.adapters.RecyclerAdapterSeeAllTvshows;
+import com.example.acer.movies.models.TVShow;
+import com.example.acer.movies.network.ApiService;
+import com.example.acer.movies.network.TVShowResponse;
+import com.example.acer.movies.network.URLConstants;
+import com.example.acer.movies.utils.EndlessRecyclerViewScrollListener;
+import com.example.acer.movies.utils.SpacesItemDecoration;
 
 import java.util.ArrayList;
 

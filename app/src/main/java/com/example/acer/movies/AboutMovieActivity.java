@@ -1,11 +1,9 @@
 package com.example.acer.movies;
 
 import android.content.Intent;
-import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.provider.MediaStore;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -16,23 +14,31 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 
-import android.view.View;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.example.acer.movies.Network.AboutMovieResponse;
-import com.example.acer.movies.Network.ApiService;
-import com.example.acer.movies.Network.CreditResponse;
-import com.example.acer.movies.Network.ImageResponse;
-import com.example.acer.movies.Network.MovieResponse;
-import com.example.acer.movies.Network.ReviewResponse;
-import com.example.acer.movies.Network.URLConstants;
+import com.example.acer.movies.adapters.BannerViewPagerAdapter;
+import com.example.acer.movies.adapters.FragmentPager;
+import com.example.acer.movies.fragments.CastMoviefragment;
+import com.example.acer.movies.fragments.InfoAboutMovieFragment;
+import com.example.acer.movies.fragments.ReviewsFragment;
+import com.example.acer.movies.models.BackdropImage;
+import com.example.acer.movies.models.Cast;
+import com.example.acer.movies.models.Genre;
+import com.example.acer.movies.models.Movie;
+import com.example.acer.movies.models.Review;
+import com.example.acer.movies.models.Video;
+import com.example.acer.movies.network.AboutMovieResponse;
+import com.example.acer.movies.network.ApiService;
+import com.example.acer.movies.network.CreditResponse;
+import com.example.acer.movies.network.ImageResponse;
+import com.example.acer.movies.network.MovieResponse;
+import com.example.acer.movies.network.ReviewResponse;
+import com.example.acer.movies.network.URLConstants;
+import com.example.acer.movies.utils.IntentConstants;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
@@ -56,11 +62,6 @@ public class AboutMovieActivity extends AppCompatActivity implements InfoAboutMo
      */
     //private SectionsPagerAdapter mSectionsPagerAdapter;
 
-    /**
-     * The {@link ViewPager} that will host the section contents.
-     */
-
-    private ViewPager mBannerViewPager;
     private BannerViewPagerAdapter bannerViewPagerAdapter;
     private ArrayList<String> allBannerImageFullLinks;
     ImageView poster;
@@ -108,7 +109,10 @@ public class AboutMovieActivity extends AppCompatActivity implements InfoAboutMo
         // Set up the ViewPager with the sections adapter.
         //mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        mBannerViewPager = (ViewPager) findViewById(R.id.pager);
+        /*
+      The {@link ViewPager} that will host the section contents.
+     */
+        ViewPager mBannerViewPager = (ViewPager) findViewById(R.id.pager);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
 
 
@@ -244,7 +248,7 @@ public class AboutMovieActivity extends AppCompatActivity implements InfoAboutMo
                 }
                 for (int i = 0; i < bannerImagesLinksList.size(); i++) {
                     if (i < 8) {
-                        allBannerImageFullLinks.add(URLConstants.BANNER_BASE_URL + bannerImagesLinksList.get(i).bannerImageLink);
+                        allBannerImageFullLinks.add(URLConstants.BANNER_BASE_URL + bannerImagesLinksList.get(i).getBannerImageLink());
                         RadioButton radioButton = new RadioButton(getApplicationContext());
                         radioButton.setButtonDrawable(R.drawable.ic_radio_button_unchecked);
                         radioGroup.addView(radioButton);

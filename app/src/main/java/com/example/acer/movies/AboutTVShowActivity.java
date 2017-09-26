@@ -10,8 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.Toolbar;
 
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
@@ -23,11 +21,20 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.example.acer.movies.Network.AboutTVShowResponse;
-import com.example.acer.movies.Network.ApiService;
-import com.example.acer.movies.Network.CreditResponse;
-import com.example.acer.movies.Network.ImageResponse;
-import com.example.acer.movies.Network.URLConstants;
+import com.example.acer.movies.adapters.BannerViewPagerAdapter;
+import com.example.acer.movies.adapters.TVShowFragmentPager;
+import com.example.acer.movies.fragments.CastTVShowFragment;
+import com.example.acer.movies.fragments.InfoAboutTVShowFragment;
+import com.example.acer.movies.models.BackdropImage;
+import com.example.acer.movies.models.Cast;
+import com.example.acer.movies.models.Genre;
+import com.example.acer.movies.models.Video;
+import com.example.acer.movies.network.AboutTVShowResponse;
+import com.example.acer.movies.network.ApiService;
+import com.example.acer.movies.network.CreditResponse;
+import com.example.acer.movies.network.ImageResponse;
+import com.example.acer.movies.network.URLConstants;
+import com.example.acer.movies.utils.IntentConstants;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
@@ -220,14 +227,13 @@ public class AboutTVShowActivity extends AppCompatActivity {
         call.enqueue(new Callback<ImageResponse>() {
             @Override
             public void onResponse(Call<ImageResponse> call, Response<ImageResponse> response) {
-                Log.i("APPLE1", String.valueOf(response.code()));
                 ArrayList<BackdropImage> bannerImagesLinksList = response.body().getBannerImageLinks();
                 if (bannerImagesLinksList == null) {
                     return;
                 }
                 for (int i = 0; i < bannerImagesLinksList.size(); i++) {
                     if (i < 8) {
-                        allBannerImageFullLinks.add(URLConstants.BANNER_BASE_URL + bannerImagesLinksList.get(i).bannerImageLink);
+                        allBannerImageFullLinks.add(URLConstants.BANNER_BASE_URL + bannerImagesLinksList.get(i).getBannerImageLink());
                         RadioButton radioButton = new RadioButton(getApplicationContext());
                         radioButton.setButtonDrawable(R.drawable.ic_radio_button_unchecked);
                         radioGroupTvShow.addView(radioButton);

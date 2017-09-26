@@ -12,22 +12,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.FrameLayout;
 import android.widget.TextView;
+
+import com.example.acer.movies.adapters.MainFragmentPager;
 
 public class MainActivity extends AppCompatActivity {
 
-    /**
-     * The {@link android.support.v4.view.PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link android.support.v4.app.FragmentStatePagerAdapter}.
-     */
-    private MainFragmentPager mainFragmentPager;
     private ViewPager mViewPager;
-    private TabLayout mainTabLayout;
     Animation fabOpen, fabClose;
     View translucentView;
     FloatingActionButton fabSearch, fabMovieSearch, fabTvShowSearch;
@@ -67,12 +58,20 @@ public class MainActivity extends AppCompatActivity {
         // studentListFragment.setArguments(bundle);
         //getSupportFragmentManager().beginTransaction().add(R.id.mainFragmentContainer, moviesFragment).commit();
 
-        mainTabLayout = (TabLayout) findViewById(R.id.mainTabs);
+        TabLayout mainTabLayout = (TabLayout) findViewById(R.id.mainTabs);
 
         mainTabLayout.addTab(mainTabLayout.newTab());
         mainTabLayout.addTab(mainTabLayout.newTab());
 
-        mainFragmentPager = new MainFragmentPager(getSupportFragmentManager());
+        /*
+      The {@link android.support.v4.view.PagerAdapter} that will provide
+      fragments for each of the sections. We use a
+      {@link FragmentPagerAdapter} derivative, which will keep every
+      loaded fragment in memory. If this becomes too memory intensive, it
+      may be best to switch to a
+      {@link android.support.v4.app.FragmentStatePagerAdapter}.
+     */
+        MainFragmentPager mainFragmentPager = new MainFragmentPager(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);

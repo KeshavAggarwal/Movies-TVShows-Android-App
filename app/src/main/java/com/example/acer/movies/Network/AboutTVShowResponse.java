@@ -1,8 +1,8 @@
-package com.example.acer.movies.Network;
+package com.example.acer.movies.network;
 
-import com.example.acer.movies.Genre;
-import com.example.acer.movies.TVShowsCreaters;
-import com.example.acer.movies.Video;
+import com.example.acer.movies.models.Genre;
+import com.example.acer.movies.models.TVShowsCreaters;
+import com.example.acer.movies.models.Video;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;

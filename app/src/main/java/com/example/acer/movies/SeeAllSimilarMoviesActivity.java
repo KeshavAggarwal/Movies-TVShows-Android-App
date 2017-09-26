@@ -6,15 +6,17 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.transition.Slide;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.example.acer.movies.Network.ApiService;
-import com.example.acer.movies.Network.MovieResponse;
-import com.example.acer.movies.Network.URLConstants;
+import com.example.acer.movies.adapters.RecyclerViewAdpterSeeAllActivity;
+import com.example.acer.movies.models.Movie;
+import com.example.acer.movies.network.ApiService;
+import com.example.acer.movies.network.MovieResponse;
+import com.example.acer.movies.network.URLConstants;
+import com.example.acer.movies.utils.EndlessRecyclerViewScrollListener;
+import com.example.acer.movies.utils.IntentConstants;
+import com.example.acer.movies.utils.SpacesItemDecoration;
 
 import java.util.ArrayList;
 

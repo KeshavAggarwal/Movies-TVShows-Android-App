@@ -1,12 +1,8 @@
-package com.example.acer.movies.Network;
-
-import android.support.v7.widget.RecyclerViewAccessibilityDelegate;
-
-import java.io.Serializable;
+package com.example.acer.movies.network;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
-import retrofit2.http.PATCH;
+import retrofit2.http.Headers;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
@@ -16,6 +12,7 @@ import retrofit2.http.Query;
 
 public interface ApiService {
 
+    @Headers("access_token: 88484499033")
     @GET("popular")
     Call<MovieResponse> getPopularMovies(@Query("api_key") String api_key,
                                          @Query("page") int page);

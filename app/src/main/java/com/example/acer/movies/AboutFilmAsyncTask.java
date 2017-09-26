@@ -2,6 +2,9 @@ package com.example.acer.movies;
 
 import android.os.AsyncTask;
 
+import com.example.acer.movies.models.AboutFilm;
+import com.example.acer.movies.network.URLConstants;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -74,9 +77,9 @@ public class AboutFilmAsyncTask extends AsyncTask<String, Void, AboutFilm> {
             }
             aboutFilms.overview = object.getString("overview");
             String backdropPath = object.getString("backdrop_path");
-            aboutFilms.backgroundPath = UrlConstant.URL_CONSTANT + backdropPath;
+            aboutFilms.backgroundPath = URLConstants.BANNER_BASE_URL + backdropPath;
             String poster = object.getString("poster_path");
-            aboutFilms.posterPath = UrlConstant.URL_CONSTANT + poster;
+            aboutFilms.posterPath = URLConstants.IMAGE_BASE_URL + poster;
 
         } catch (JSONException e) {
             e.printStackTrace();

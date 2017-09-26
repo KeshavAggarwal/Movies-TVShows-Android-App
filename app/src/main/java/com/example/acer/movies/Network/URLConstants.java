@@ -1,4 +1,4 @@
-package com.example.acer.movies.Network;
+package com.example.acer.movies.network;
 
 /**
  * Created by KeshavAggarwal on 12/01/17.

@@ -15,9 +15,13 @@ import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 
-import com.example.acer.movies.Network.ApiService;
-import com.example.acer.movies.Network.MovieResponse;
-import com.example.acer.movies.Network.URLConstants;
+import com.example.acer.movies.adapters.RecyclerAdapterSearchMovies;
+import com.example.acer.movies.models.Movie;
+import com.example.acer.movies.network.ApiService;
+import com.example.acer.movies.network.MovieResponse;
+import com.example.acer.movies.network.URLConstants;
+import com.example.acer.movies.utils.EndlessRecyclerViewScrollListener;
+import com.example.acer.movies.utils.SpacesItemDecoration;
 
 import java.util.ArrayList;
 
@@ -30,7 +34,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class SearchMovieActivity extends AppCompatActivity {
     private EndlessRecyclerViewScrollListener scrollListener;
     android.widget.SearchView searchView;
-    FrameLayout searchBackContainer;
     ImageButton searchBack;
     ProgressBar progress;
     RecyclerAdapterSearchMovies recyclerAdapterSearchMovies;

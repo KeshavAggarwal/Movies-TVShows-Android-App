@@ -1,8 +1,6 @@
-package com.example.acer.movies.Network;
+package com.example.acer.movies.network;
 
-import android.os.Parcelable;
-
-import com.example.acer.movies.Movie;
+import com.example.acer.movies.models.Movie;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
