@@ -273,9 +273,9 @@ public class AboutMovieActivity extends AppCompatActivity implements InfoAboutMo
                 ArrayList<Genre> genres = response.body().getGenres();
                 for (int i = 0; i < genres.size(); i++) {
                     if (i < genres.size() - 1)
-                        genreTextView.append(genres.get(i).name + ", ");
+                        genreTextView.append(genres.get(i).getName() + ", ");
                     else
-                        genreTextView.append(genres.get(i).name);
+                        genreTextView.append(genres.get(i).getName());
                 }
 
                 aboutMovieResponse = new AboutMovieResponse();

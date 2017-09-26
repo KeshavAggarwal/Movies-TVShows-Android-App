@@ -10,18 +10,23 @@ import java.io.Serializable;
 public class Movie implements Serializable{
 
     @SerializedName("original_title")
+    private
     String title;
 
     @SerializedName("release_date")
+    private
     String date;
 
     @SerializedName("vote_average")
+    private
     double rating;
 
     @SerializedName("poster_path")
+    private
     String posterPath;
 
     @SerializedName("id")
+    private
     int id;
 
     public String getTitle() {

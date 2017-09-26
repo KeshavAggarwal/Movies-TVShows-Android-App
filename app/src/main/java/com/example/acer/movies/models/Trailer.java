@@ -7,8 +7,8 @@ import java.io.Serializable;
  */
 
 public class Trailer implements Serializable {
-    String name;
-    String key;
+    private String name;
+    private String key;
 
     public String getName() {
         return name;

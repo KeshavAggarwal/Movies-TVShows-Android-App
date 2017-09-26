@@ -12,6 +12,7 @@ import java.util.ArrayList;
 public class Video {
 
     @SerializedName("results")
+    private
     ArrayList<Trailer> trailers;
 
     public ArrayList<Trailer> getTrailers() {

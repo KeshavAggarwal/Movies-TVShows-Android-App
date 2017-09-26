@@ -8,9 +8,9 @@ import java.io.Serializable;
 
 public class TVShowsCreaters implements Serializable{
 
-    int id;
-    String name;
-    String profile_path;
+    private int id;
+    private String name;
+    private String profile_path;
 
     public int getId() {
         return id;

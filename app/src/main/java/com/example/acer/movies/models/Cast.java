@@ -8,11 +8,11 @@ import java.io.Serializable;
 
 public class Cast implements Serializable {
 
-    int cast_id;
-    String character;
-    String credit_id;
-    String name;
-    String profile_path;
+    private int cast_id;
+    private String character;
+    private String credit_id;
+    private String name;
+    private String profile_path;
 
     public int getCast_id() {
         return cast_id;

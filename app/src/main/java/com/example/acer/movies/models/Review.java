@@ -8,9 +8,9 @@ import java.io.Serializable;
 
 public class Review implements Serializable {
 
-    String author;
-    String content;
-    String url;
+    private String author;
+    private String content;
+    private String url;
 
     public String getAuthor() {
         return author;

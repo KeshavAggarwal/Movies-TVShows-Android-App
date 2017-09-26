@@ -258,9 +258,9 @@ public class AboutTVShowActivity extends AppCompatActivity {
                 ArrayList<Genre> genres = response.body().getGenres();
                 for (int i = 0; i < genres.size(); i++) {
                     if (i < genres.size() - 1)
-                        genreTextView.append(genres.get(i).name + ", ");
+                        genreTextView.append(genres.get(i).getName() + ", ");
                     else
-                        genreTextView.append(genres.get(i).name);
+                        genreTextView.append(genres.get(i).getName());
                 }
 
                 AboutTVShowResponse aboutTVShowResponse = new AboutTVShowResponse();
