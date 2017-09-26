@@ -63,7 +63,7 @@ public class InfoAboutMovieFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable Bundle savedInstanceState) {
-        context = container.getContext();
+        context = getActivity();
         View v = inflater.inflate(R.layout.fragment_info_movie, container, false);
         abouFilmTextView = (TextView) v.findViewById(R.id.aboutFilmTextView);
         releasedTextView = (TextView) v.findViewById(R.id.releasedTextView);

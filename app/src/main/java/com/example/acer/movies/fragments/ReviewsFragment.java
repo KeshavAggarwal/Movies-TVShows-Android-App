@@ -34,7 +34,7 @@ public class ReviewsFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        context = container.getContext();
+        context = getActivity();
         View v = inflater.inflate(R.layout.fragment_reviews, container, false);
 
         recyclerView = (RecyclerView) v.findViewById(R.id.reviewsRecyclerView);
@@ -42,14 +42,10 @@ public class ReviewsFragment extends Fragment {
         reviewsMain = new ArrayList<>();
         return v;
 
-//            View v = inflater.inflate(R.layout.fragment_no_reviews, container, false);
-//            return v;
-
     }
 
     public static ReviewsFragment newInstance() {
-        ReviewsFragment reviewsFragment = new ReviewsFragment();
-        return reviewsFragment;
+        return new ReviewsFragment();
     }
 
     public void setUIArguements(final Bundle args) {
@@ -59,14 +55,12 @@ public class ReviewsFragment extends Fragment {
                 @Override
                 public void run() {
                     reviewsMain = (ArrayList<Review>) args.getSerializable("REVIEWS");
-                    Log.i("FUNTHEYTAG", String.valueOf(reviewsMain.size()));
 
                     if (reviewsMain.size() == 0) {
                         noReviewTextView.setVisibility(View.VISIBLE);
                         noReviewTextView.setText("No Reviews are currently available for this movie.");
 
                     } else {
-                        Log.i("INELSE", String.valueOf(reviewsMain.size()));
                         recyclerViewAdapterReviews = new RecyclerViewAdapterReviews(reviewsMain, context);
                         recyclerView.setAdapter(recyclerViewAdapterReviews);
 
@@ -79,9 +73,6 @@ public class ReviewsFragment extends Fragment {
 
 
             });
-        } else {
-            Log.i("TAG", "Activity null");
-
         }
     }
 }

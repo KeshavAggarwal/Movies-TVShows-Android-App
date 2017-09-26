@@ -40,13 +40,12 @@ public class TVShowsFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_tvshows, container, false);
 
         recyclerView = (RecyclerView) v.findViewById(R.id.activityMainVerticalRecyclerView);
-        //movieResponses = new ArrayList<MovieResponse>();
         allTvShows = new TVShowResponse[4];
 
-        recyclerViewAdapterTVShow = new RecyclerViewAdapterTVShow(allTvShows, container.getContext());
+        recyclerViewAdapterTVShow = new RecyclerViewAdapterTVShow(allTvShows, getActivity());
         recyclerView.setAdapter(recyclerViewAdapterTVShow);
 
-        LinearLayoutManager verticalManager = new LinearLayoutManager(container.getContext(), LinearLayoutManager.VERTICAL, false);
+        LinearLayoutManager verticalManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(verticalManager);
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -56,12 +55,10 @@ public class TVShowsFragment extends Fragment {
 
         ApiService service = retrofit.create(ApiService.class);
         Call<TVShowResponse> call = service.getAiringToday(URLConstants.API_KEY, 1);
-        Log.i("ABC1", "FAILED");
 
         call.enqueue(new Callback<TVShowResponse>() {
             @Override
             public void onResponse(Call<TVShowResponse> call, Response<TVShowResponse> response) {
-                Log.i("ABC2", "FUN");
                 ArrayList<TVShow> tvShowList = response.body().getTvShows();
                 TVShowResponse airingtoday = new TVShowResponse();
                 if (tvShowList == null) {
@@ -79,12 +76,10 @@ public class TVShowsFragment extends Fragment {
         });
 
         Call<TVShowResponse> call1 = service.getOnAir(URLConstants.API_KEY, 1);
-        Log.i("ABC1", "FAILED");
 
         call1.enqueue(new Callback<TVShowResponse>() {
             @Override
             public void onResponse(Call<TVShowResponse> call, Response<TVShowResponse> response) {
-                Log.i("ABC2", "FUN");
                 ArrayList<TVShow> tvShowList = response.body().getTvShows();
                 TVShowResponse onAir = new TVShowResponse();
                 if (tvShowList == null) {
@@ -102,12 +97,10 @@ public class TVShowsFragment extends Fragment {
         });
 
         Call<TVShowResponse> call2 = service.getPopular(URLConstants.API_KEY, 1);
-        Log.i("ABC1", "FAILED");
 
         call2.enqueue(new Callback<TVShowResponse>() {
             @Override
             public void onResponse(Call<TVShowResponse> call, Response<TVShowResponse> response) {
-                Log.i("ABC2", "FUN");
                 ArrayList<TVShow> tvShowList = response.body().getTvShows();
                 TVShowResponse popular = new TVShowResponse();
                 if (tvShowList == null) {
@@ -125,12 +118,10 @@ public class TVShowsFragment extends Fragment {
         });
 
         Call<TVShowResponse> call3 = service.getTopRated(URLConstants.API_KEY, 1);
-        Log.i("ABC1", "FAILED");
 
         call3.enqueue(new Callback<TVShowResponse>() {
             @Override
             public void onResponse(Call<TVShowResponse> call, Response<TVShowResponse> response) {
-                Log.i("ABC2", "FUN");
                 ArrayList<TVShow> tvShowList = response.body().getTvShows();
                 TVShowResponse topRated = new TVShowResponse();
                 if (tvShowList == null) {

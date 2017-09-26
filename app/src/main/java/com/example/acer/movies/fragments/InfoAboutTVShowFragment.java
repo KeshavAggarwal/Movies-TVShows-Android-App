@@ -40,7 +40,7 @@ public class InfoAboutTVShowFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_info_tvshow, container, false);
-        context = container.getContext();
+        context = getActivity();
         aboutTvShowTextView = (TextView) v.findViewById(R.id.aboutTvShowTextView);
         firstAirDateTextView = (TextView) v.findViewById(R.id.firstAirDateTextView);
         lastAirDateTextView = (TextView) v.findViewById(R.id.lastAirDateTextView);

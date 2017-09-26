@@ -4,7 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.example.acer.movies.fragments.CastMoviefragment;
+import com.example.acer.movies.fragments.CastMovieFragment;
 import com.example.acer.movies.fragments.InfoAboutMovieFragment;
 import com.example.acer.movies.fragments.ReviewsFragment;
 
@@ -40,7 +40,7 @@ public class FragmentPager extends FragmentPagerAdapter {
             case 1:
                 fragment = map.get(position);
                 if (fragment == null) {
-                    fragment = CastMoviefragment.newInstance();
+                    fragment = CastMovieFragment.newInstance();
                     map.put(position, fragment);
                     return fragment;
                 } else {

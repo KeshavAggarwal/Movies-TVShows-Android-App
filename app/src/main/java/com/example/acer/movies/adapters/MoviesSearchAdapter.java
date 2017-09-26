@@ -26,11 +26,11 @@ import java.util.ArrayList;
  * Created by KeshavAggarwal on 30/03/17.
  */
 
-public class RecyclerAdapterSearchMovies extends RecyclerView.Adapter<RecyclerAdapterSearchMovies.ViewHolder> {
+public class MoviesSearchAdapter extends RecyclerView.Adapter<MoviesSearchAdapter.ViewHolder> {
     Context mContext;
     private ArrayList<Movie> mSearchedMovies;
 
-    public RecyclerAdapterSearchMovies(ArrayList<Movie> searchedMovies, Context context) {
+    public MoviesSearchAdapter(ArrayList<Movie> searchedMovies, Context context) {
         mContext = context;
         mSearchedMovies = searchedMovies;
     }

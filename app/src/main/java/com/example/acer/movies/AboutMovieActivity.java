@@ -22,7 +22,7 @@ import android.widget.TextView;
 
 import com.example.acer.movies.adapters.BannerViewPagerAdapter;
 import com.example.acer.movies.adapters.FragmentPager;
-import com.example.acer.movies.fragments.CastMoviefragment;
+import com.example.acer.movies.fragments.CastMovieFragment;
 import com.example.acer.movies.fragments.InfoAboutMovieFragment;
 import com.example.acer.movies.fragments.ReviewsFragment;
 import com.example.acer.movies.models.BackdropImage;
@@ -353,7 +353,7 @@ public class AboutMovieActivity extends AppCompatActivity implements InfoAboutMo
 
                 Bundle args = new Bundle();
                 args.putSerializable("MOVIE_CAST", movieCast);
-                CastMoviefragment obj = (CastMoviefragment) fragmentPager.function(1);
+                CastMovieFragment obj = (CastMovieFragment) fragmentPager.function(1);
                 obj.setUIArguements(args);
 
             }

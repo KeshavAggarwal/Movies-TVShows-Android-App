@@ -11,11 +11,10 @@ import android.text.InputType;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.inputmethod.EditorInfo;
-import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 
-import com.example.acer.movies.adapters.RecyclerAdapterSearchMovies;
+import com.example.acer.movies.adapters.MoviesSearchAdapter;
 import com.example.acer.movies.models.Movie;
 import com.example.acer.movies.network.ApiService;
 import com.example.acer.movies.network.MovieResponse;
@@ -36,7 +35,7 @@ public class SearchMovieActivity extends AppCompatActivity {
     android.widget.SearchView searchView;
     ImageButton searchBack;
     ProgressBar progress;
-    RecyclerAdapterSearchMovies recyclerAdapterSearchMovies;
+    MoviesSearchAdapter recyclerAdapterSearchMovies;
     RecyclerView searchResults;
     ArrayList<Movie> mainSearchedmovies;
 
@@ -62,7 +61,7 @@ public class SearchMovieActivity extends AppCompatActivity {
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.spacing);
         searchResults.addItemDecoration(new SpacesItemDecoration(spacingInPixels));
 
-        recyclerAdapterSearchMovies = new RecyclerAdapterSearchMovies(mainSearchedmovies, this);
+        recyclerAdapterSearchMovies = new MoviesSearchAdapter(mainSearchedmovies, this);
         searchResults.setAdapter(recyclerAdapterSearchMovies);
 
         final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);

@@ -31,7 +31,7 @@ public class CastTVShowFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        context = container.getContext();
+        context = getActivity();
         View v = inflater.inflate(R.layout.fragment_cast_tvshow, container, false);
 
         recyclerView = (RecyclerView) v.findViewById(R.id.tvShowCastRecyclerView);
@@ -43,8 +43,7 @@ public class CastTVShowFragment extends Fragment {
 
 
     public static CastTVShowFragment newInstance() {
-        CastTVShowFragment castTVShowFragment = new CastTVShowFragment();
-        return castTVShowFragment;
+        return new CastTVShowFragment();
     }
 
     public void setUIArguements(final Bundle args) {
@@ -56,7 +55,6 @@ public class CastTVShowFragment extends Fragment {
                     noCastTextView.setVisibility(View.VISIBLE);
                     noCastTextView.setText("No cast is currently available for this show.");
                 } else {
-
 
                     recyclerViewAdapterTVShowCast = new RecyclerViewAdapterTVShowCast(tvShowCastMain, context);
                     recyclerView.setAdapter(recyclerViewAdapterTVShowCast);

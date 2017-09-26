@@ -30,12 +30,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MoviesFragment extends Fragment {
     RecyclerView recyclerView;
-    //ArrayList<MovieResponse> movieResponses;
     MovieResponse[] allMovies;
-    /*Animation fabOpen, fabClose;
-    FloatingActionButton fabSearch, fabMovieSearch, fabTvShowSearch;*/
     Recycler_View_Adapter_Main recyclerViewAdapterMain;
-    //boolean isOpen = false;
 
     @Nullable
     @Override
@@ -43,19 +39,12 @@ public class MoviesFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_movies, container, false);
 
         recyclerView = (RecyclerView) v.findViewById(R.id.activityMainVerticalRecyclerView);
-
-        /*fabSearch = (FloatingActionButton) getActivity().findViewById(R.id.searchFabButton);
-        fabMovieSearch = (FloatingActionButton) getActivity().findViewById(R.id.searchMovieFabButton);
-        fabTvShowSearch = (FloatingActionButton) getActivity().findViewById(R.id.searchTvShowFabButton);
-
-        fabOpen = AnimationUtils.loadAnimation(container.getContext(), R.anim.fab_open);
-        fabClose = AnimationUtils.loadAnimation(container.getContext(), R.anim.fab_close);*/
         allMovies = new MovieResponse[4];
 
-        recyclerViewAdapterMain = new Recycler_View_Adapter_Main(allMovies, container.getContext());
+        recyclerViewAdapterMain = new Recycler_View_Adapter_Main(allMovies, getActivity());
         recyclerView.setAdapter(recyclerViewAdapterMain);
 
-        LinearLayoutManager verticalManager = new LinearLayoutManager(container.getContext(), LinearLayoutManager.VERTICAL, false);
+        LinearLayoutManager verticalManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(verticalManager);
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -96,7 +85,6 @@ public class MoviesFragment extends Fragment {
                     return;
                 }
                 nowPlayingMovies.setMovies(movieList);
-                //movieResponses.add(nowPlayingMovies);
                 allMovies[1] = nowPlayingMovies;
                 recyclerViewAdapterMain.notifyDataSetChanged();
             }
@@ -119,7 +107,6 @@ public class MoviesFragment extends Fragment {
                     return;
                 }
                 topRatedMovies.setMovies(movieList);
-                //movieResponses.add(topRatedMovies);
                 allMovies[2] = topRatedMovies;
                 recyclerViewAdapterMain.notifyDataSetChanged();
             }
@@ -141,7 +128,6 @@ public class MoviesFragment extends Fragment {
                     return;
                 }
                 upcomingMovies.setMovies(movieList);
-                //movieResponses.add(upcomingMovies);
                 allMovies[3] = upcomingMovies;
                 recyclerViewAdapterMain.notifyDataSetChanged();
             }
@@ -151,45 +137,6 @@ public class MoviesFragment extends Fragment {
 
             }
         });
-
-       /* recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
-            }
-
-            @Override
-            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
-                if (dy > 0)
-                    fabSearch.hide();
-                else if (dy < 0)
-                    fabSearch.show();
-            }
-
-        });
-*/
-        /*fabSearch.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (isOpen) {
-                    fabMovieSearch.startAnimation(fabClose);
-                    fabTvShowSearch.startAnimation(fabClose);
-                    fabMovieSearch.setClickable(false);
-                    fabTvShowSearch.setClickable(false);
-                    isOpen = false;
-
-                } else {
-
-                    fabMovieSearch.startAnimation(fabOpen);
-                    fabTvShowSearch.startAnimation(fabOpen);
-                    fabMovieSearch.setClickable(true);
-                    fabTvShowSearch.setClickable(true);
-                    isOpen = true;
-                }
-            }
-        });*/
-
         return v;
     }
 }
