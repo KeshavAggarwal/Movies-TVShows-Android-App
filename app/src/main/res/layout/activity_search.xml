@@ -66,7 +66,7 @@
             android:indeterminateTint="?android:colorAccent"
             android:indeterminateTintMode="src_in" />
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/search_results"
             android:layout_width="match_parent"
             android:visibility="gone"

@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.acer.movies.SeeAllMoviesActivity"
+    tools:context="com.app.techvalley.movies.SeeAllMoviesActivity"
     tools:showIn="@layout/see_all_activity_movie">
 
     <ProgressBar
@@ -19,7 +19,7 @@
         android:indeterminateTintMode="src_in"
         android:visibility="gone" />
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/seeAllActivityRecyclerViewMovies"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

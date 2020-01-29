@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.acer.movies">
+    package="com.app.techvalley.movies">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -11,14 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".AboutMovieActivity"
+            android:name="com.app.techvalley.movies.AboutMovieActivity"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
-            android:name=".SeeAllMoviesActivity"
+            android:name="com.app.techvalley.movies.SeeAllMoviesActivity"
             android:label="@string/title_activity_main3"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
-            android:name=".MainActivity"
+            android:name="com.app.techvalley.movies.MainActivity"
             android:label="MovieDB"
             android:theme="@style/AppTheme.Home">
             <intent-filter>
@@ -27,16 +29,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".AboutTVShowActivity"
+            android:name="com.app.techvalley.movies.AboutTVShowActivity"
             android:label="@string/title_activity_about_tvshow"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
-            android:name=".SeeAllTVShowsActivity"
+            android:name="com.app.techvalley.movies.SeeAllTVShowsActivity"
             android:label="@string/title_activity_see_all_tvshows"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
-            android:name=".SearchMovieActivity"
+            android:name="com.app.techvalley.movies.SearchMovieActivity"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.Search">
             <intent-filter>
@@ -47,9 +52,12 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
-        <activity android:name=".YouTubeAcitivity" />
-        <activity android:name=".SeeAllSimilarMoviesActivity" />
-        <activity android:name=".SearchTVShowsAcitivity"
+
+        <activity android:name="com.app.techvalley.movies.YouTubeActivity" />
+
+        <activity android:name="com.app.techvalley.movies.SeeAllSimilarMoviesActivity" />
+
+        <activity android:name="com.app.techvalley.movies.SearchTVShowsActivity"
             android:launchMode="singleTop"
             android:theme="@style/AppTheme.Search">
             <intent-filter>
@@ -60,6 +68,7 @@
                 android:name="android.app.searchable"
                 android:resource="@xml/searchable" />
         </activity>
+
     </application>
 
 </manifest>

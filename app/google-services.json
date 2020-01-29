@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "482588012853",
+    "firebase_url": "https://movies-and-shows-6a737.firebaseio.com",
+    "project_id": "movies-and-shows-6a737",
+    "storage_bucket": "movies-and-shows-6a737.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482588012853:android:b1e1d15250a24fa36f9c7c",
+        "android_client_info": {
+          "package_name": "com.app.techvalley.movies"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "482588012853-3a3dadg4gkhf3oareuh0c8ncch38souh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.techvalley.movies",
+            "certificate_hash": "46dda892e784dce0f02768f9dd482988273df32e"
+          }
+        },
+        {
+          "client_id": "482588012853-mpjvnn71eqcq63pdkrkum7kr449ps2ec.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoz7EPqLl5mMv40WOPJ5IQTX0LkDrkg4g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "482588012853-mpjvnn71eqcq63pdkrkum7kr449ps2ec.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
