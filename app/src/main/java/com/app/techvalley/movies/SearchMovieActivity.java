@@ -3,10 +3,14 @@ package com.app.techvalley.movies;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
+
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.text.InputType;
 import android.text.TextUtils;
 import android.view.View;
@@ -64,7 +68,7 @@ public class SearchMovieActivity extends AppCompatActivity {
         recyclerAdapterSearchMovies = new MoviesSearchAdapter(mainSearchedmovies, this);
         searchResults.setAdapter(recyclerAdapterSearchMovies);
 
-        final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
+        final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, RecyclerView.VERTICAL, false);
         searchResults.setLayoutManager(gridLayoutManager);
 
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));

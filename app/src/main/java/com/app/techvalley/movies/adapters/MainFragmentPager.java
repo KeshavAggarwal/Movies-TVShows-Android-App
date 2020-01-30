@@ -34,14 +34,12 @@ public class MainFragmentPager extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        switch(position){
+        switch (position) {
             case 0:
-                MoviesFragment moviesFragment = new MoviesFragment();
-                return moviesFragment;
+                return new MoviesFragment();
 
             case 1:
-                TVShowsFragment tvShowsFragment = new TVShowsFragment();
-                return tvShowsFragment;
+                return new TVShowsFragment();
         }
         return null;
     }

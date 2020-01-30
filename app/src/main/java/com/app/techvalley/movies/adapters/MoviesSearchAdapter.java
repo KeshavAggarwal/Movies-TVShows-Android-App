@@ -5,8 +5,10 @@ import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,6 +21,8 @@ import com.app.techvalley.movies.models.Movie;
 import com.app.techvalley.movies.R;
 import com.app.techvalley.movies.network.URLConstants;
 import com.squareup.picasso.Picasso;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 
@@ -35,6 +39,7 @@ public class MoviesSearchAdapter extends RecyclerView.Adapter<MoviesSearchAdapte
         mSearchedMovies = searchedMovies;
     }
 
+    @NotNull
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.search_movie_list_item, parent, false);

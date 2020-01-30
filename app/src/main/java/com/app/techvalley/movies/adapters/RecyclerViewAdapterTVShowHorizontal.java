@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.app.techvalley.movies.OnRecyclerViewitemClicklistener;
+import com.app.techvalley.movies.OnRecyclerViewItemClickListener;
 import com.app.techvalley.movies.R;
 import com.app.techvalley.movies.models.TVShow;
 import com.app.techvalley.movies.network.URLConstants;
@@ -25,7 +25,7 @@ public class RecyclerViewAdapterTVShowHorizontal extends RecyclerView.Adapter<Re
 
     private ArrayList<TVShow> mTVShows;
     Context mContext;
-    private OnRecyclerViewitemClicklistener listener;
+    private OnRecyclerViewItemClickListener listener;
     private int verticalPosition;
 
     public RecyclerViewAdapterTVShowHorizontal(ArrayList<TVShow> tvShows, Context context) {
@@ -63,7 +63,7 @@ public class RecyclerViewAdapterTVShowHorizontal extends RecyclerView.Adapter<Re
         return mTVShows.size();
     }
 
-    public void setOnItemClickListener(OnRecyclerViewitemClicklistener listener, int verticalPosition) {
+    public void setOnItemClickListener(OnRecyclerViewItemClickListener listener, int verticalPosition) {
         this.listener = listener;
         this.verticalPosition = verticalPosition;
     }

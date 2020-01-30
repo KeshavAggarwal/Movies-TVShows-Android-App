@@ -4,20 +4,8 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import com.google.android.material.appbar.CollapsingToolbarLayout;
-import com.google.android.material.tabs.TabLayout;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.palette.graphics.Palette;
-import androidx.appcompat.widget.Toolbar;
-
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 import android.os.Bundle;
 import android.util.Log;
-
-
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -37,11 +25,17 @@ import com.app.techvalley.movies.network.CreditResponse;
 import com.app.techvalley.movies.network.ImageResponse;
 import com.app.techvalley.movies.network.URLConstants;
 import com.app.techvalley.movies.utils.IntentConstants;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
+import com.google.android.material.tabs.TabLayout;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
 import java.util.ArrayList;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.palette.graphics.Palette;
+import androidx.viewpager.widget.ViewPager;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -49,19 +43,6 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class AboutTVShowActivity extends AppCompatActivity {
-
-    /**
-     * The {@link PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link FragmentStatePagerAdapter}.
-     */
-
-    /**
-     * The {@link ViewPager} that will host the section contents.
-     */
     private ViewPager mBannerViewPager;
     private BannerViewPagerAdapter bannerViewPagerAdapter;
     private ArrayList<String> allBannerImageFullLinks;
@@ -75,9 +56,6 @@ public class AboutTVShowActivity extends AppCompatActivity {
     int currentPage = 0;
     TextView genreTextView;
     RadioGroup radioGroupTvShow;
-    TextView releaseDateTextView;
-    TextView runTimeTextView;
-    Bitmap bitmap;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +68,7 @@ public class AboutTVShowActivity extends AppCompatActivity {
         String posterPath = intent.getStringExtra(IntentConstants.INTENT_KEY_POSTER_PATH);
         final String tvShowName = intent.getStringExtra(IntentConstants.INTENT_KEY_TVSHOW_NAME);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -100,12 +78,8 @@ public class AboutTVShowActivity extends AppCompatActivity {
         // primary sections of the activity.
         //mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
         allBannerImageFullLinks = new ArrayList<>();
-
-        // Set up the ViewPager with the sections adapter.
-        //mViewPager.setAdapter(mSectionsPagerAdapter);
-
-        mBannerViewPager = (ViewPager) findViewById(R.id.tvShowpager);
-        radioGroupTvShow = (RadioGroup) findViewById(R.id.radioGroupTvShow);
+        mBannerViewPager = findViewById(R.id.tvShowpager);
+        radioGroupTvShow = findViewById(R.id.radioGroupTvShow);
 
         bannerViewPagerAdapter = new BannerViewPagerAdapter(this, allBannerImageFullLinks);
         mBannerViewPager.setAdapter(bannerViewPagerAdapter);
@@ -181,14 +155,12 @@ public class AboutTVShowActivity extends AppCompatActivity {
         });
 
 
-        tvShowNameTextView = (TextView) findViewById(R.id.tvShowNameTextView);
+        tvShowNameTextView = findViewById(R.id.tvShowNameTextView);
         tvShowNameTextView.setText(tvShowName);
-        genreTextView = (TextView) findViewById(R.id.tvShowgenreTextView);
-        //releaseDateTextView = (TextView) findViewById(R.id.releaseDateTextView);
-        //runTimeTextView = (TextView) findViewById(R.id.runTimeTextView);
+        genreTextView = findViewById(R.id.tvShowgenreTextView);
 
-        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        tabLayout = findViewById(R.id.tabLayout);
+        mViewPager = findViewById(R.id.container);
 
         tabLayout.addTab(tabLayout.newTab());
         tabLayout.addTab(tabLayout.newTab());

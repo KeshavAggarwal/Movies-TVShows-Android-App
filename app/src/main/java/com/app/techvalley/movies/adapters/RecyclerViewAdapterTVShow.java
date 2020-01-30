@@ -5,8 +5,10 @@ import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +16,7 @@ import android.widget.TextView;
 
 import com.app.techvalley.movies.AboutTVShowActivity;
 import com.app.techvalley.movies.utils.IntentConstants;
-import com.app.techvalley.movies.OnRecyclerViewitemClicklistener;
+import com.app.techvalley.movies.OnRecyclerViewItemClickListener;
 import com.app.techvalley.movies.R;
 import com.app.techvalley.movies.SeeAllTVShowsActivity;
 import com.app.techvalley.movies.network.TVShowResponse;
@@ -23,7 +25,7 @@ import com.app.techvalley.movies.network.TVShowResponse;
  * Created by KeshavAggarwal on 09/02/17.
  */
 
-public class RecyclerViewAdapterTVShow extends RecyclerView.Adapter<RecyclerViewAdapterTVShow.ViewHolder> implements OnRecyclerViewitemClicklistener {
+public class RecyclerViewAdapterTVShow extends RecyclerView.Adapter<RecyclerViewAdapterTVShow.ViewHolder> implements OnRecyclerViewItemClickListener {
 
     private TVShowResponse[] mTVShows;
     Context mContext;
@@ -55,7 +57,7 @@ public class RecyclerViewAdapterTVShow extends RecyclerView.Adapter<RecyclerView
                             intent.putExtra("ABCD", mTVShows[position].getTvShows());
                             intent.putExtra("TVSHOW_TYPE", "Airing Today");
                             intent.setClass(mContext, SeeAllTVShowsActivity.class);
-                            mContext.startActivity(intent,bundle);
+                            mContext.startActivity(intent, bundle);
                         }
                     });
                     recyclerViewAdapter = new RecyclerViewAdapterTVShowHorizontal(mTVShows[position].getTvShows(), mContext);
@@ -78,7 +80,7 @@ public class RecyclerViewAdapterTVShow extends RecyclerView.Adapter<RecyclerView
                             intent.setClass(mContext, SeeAllTVShowsActivity.class);
                             intent.putExtra("ABCD", mTVShows[position].getTvShows());
                             intent.putExtra("TVSHOW_TYPE", "On Air");
-                            mContext.startActivity(intent,bundle);
+                            mContext.startActivity(intent, bundle);
 
                         }
                     });
@@ -102,7 +104,7 @@ public class RecyclerViewAdapterTVShow extends RecyclerView.Adapter<RecyclerView
                             intent.putExtra("ABCD", mTVShows[position].getTvShows());
                             intent.putExtra("TVSHOW_TYPE", "Popular Shows");
                             intent.setClass(mContext, SeeAllTVShowsActivity.class);
-                            mContext.startActivity(intent,bundle);
+                            mContext.startActivity(intent, bundle);
 
                         }
                     });
@@ -125,7 +127,7 @@ public class RecyclerViewAdapterTVShow extends RecyclerView.Adapter<RecyclerView
                             intent.putExtra("ABCD", mTVShows[position].getTvShows());
                             intent.putExtra("TVSHOW_TYPE", "Top Rated Shows");
                             intent.setClass(mContext, SeeAllTVShowsActivity.class);
-                            mContext.startActivity(intent,bundle);
+                            mContext.startActivity(intent, bundle);
 
                         }
                     });
@@ -154,15 +156,14 @@ public class RecyclerViewAdapterTVShow extends RecyclerView.Adapter<RecyclerView
 
 
     @Override
-    public void onRecyclerViewItemClicked(int verticalposition, int horizontalPosition, View view) {
+    public void onRecyclerViewItemClicked(int verticalPosition, int horizontalPosition, View view) {
         Intent intent = new Intent();
-        Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext,view,view.getTransitionName()).toBundle();
+        Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext, view, view.getTransitionName()).toBundle();
         intent.setClass(mContext, AboutTVShowActivity.class);
-        intent.putExtra(IntentConstants.INTENT_KEY_TVSHOW_ID, mTVShows[verticalposition].getTvShows().get(horizontalPosition).getId());
-        intent.putExtra(IntentConstants.INTENT_KEY_POSTER_PATH, mTVShows[verticalposition].getTvShows().get(horizontalPosition).getPosterPath());
-        intent.putExtra(IntentConstants.INTENT_KEY_TVSHOW_NAME, mTVShows[verticalposition].getTvShows().get(horizontalPosition).getTitle());
-        mContext.startActivity(intent,bundle);
-        //Toast.makeText(mContext,mMovies[verticalposition].getMovies().get(horizontalPosition).id + " is clicked", Toast.LENGTH_SHORT).show();
+        intent.putExtra(IntentConstants.INTENT_KEY_TVSHOW_ID, mTVShows[verticalPosition].getTvShows().get(horizontalPosition).getId());
+        intent.putExtra(IntentConstants.INTENT_KEY_POSTER_PATH, mTVShows[verticalPosition].getTvShows().get(horizontalPosition).getPosterPath());
+        intent.putExtra(IntentConstants.INTENT_KEY_TVSHOW_NAME, mTVShows[verticalPosition].getTvShows().get(horizontalPosition).getTitle());
+        mContext.startActivity(intent, bundle);
 
     }
 

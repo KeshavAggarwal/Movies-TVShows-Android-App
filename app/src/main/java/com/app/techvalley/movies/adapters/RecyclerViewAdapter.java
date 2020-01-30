@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.app.techvalley.movies.models.Movie;
-import com.app.techvalley.movies.OnRecyclerViewitemClicklistener;
+import com.app.techvalley.movies.OnRecyclerViewItemClickListener;
 import com.app.techvalley.movies.R;
 import com.app.techvalley.movies.network.URLConstants;
 import com.squareup.picasso.Picasso;
@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {
     private ArrayList<Movie> mMovies;
     Context mContext;
-    private OnRecyclerViewitemClicklistener listener;
+    private OnRecyclerViewItemClickListener listener;
     private int verticalPosition;
 
     public RecyclerViewAdapter(ArrayList<Movie> movies, Context context) {
@@ -63,7 +63,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
 
-    public void setOnItemClickListener(OnRecyclerViewitemClicklistener listener, int verticalPosition) {
+    public void setOnItemClickListener(OnRecyclerViewItemClickListener listener, int verticalPosition) {
         this.listener = listener;
         this.verticalPosition = verticalPosition;
     }

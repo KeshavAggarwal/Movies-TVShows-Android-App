@@ -29,7 +29,7 @@
             </androidx.appcompat.widget.Toolbar>
 
             <com.google.android.material.tabs.TabLayout
-                android:id="@+id/mainTabs"
+                android:id="@+id/mainTL"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:tabIndicatorColor="@android:color/white" />
@@ -37,7 +37,7 @@
         </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.viewpager.widget.ViewPager
-            android:id="@+id/container"
+            android:id="@+id/containerVP"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
@@ -47,7 +47,7 @@
             android:layout_height="match_parent">
 
             <View
-                android:id="@+id/translucentView"
+                android:id="@+id/translucentV"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#85000000"
@@ -59,8 +59,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
-                android:layout_marginBottom="90dp"
                 android:layout_marginRight="16dp"
+                android:layout_marginBottom="90dp"
                 android:elevation="6dp"
                 android:src="@drawable/fab_movie_search"
                 android:visibility="invisible"
@@ -72,8 +72,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
-                android:layout_marginBottom="160dp"
                 android:layout_marginRight="16dp"
+                android:layout_marginBottom="160dp"
                 android:elevation="6dp"
                 android:src="@drawable/fab_tvshow_search"
                 android:visibility="invisible"
@@ -81,7 +81,7 @@
                 app:pressedTranslationZ="12dp" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
-                android:id="@+id/searchFabButton"
+                android:id="@+id/searchFAB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
@@ -92,27 +92,27 @@
                 app:pressedTranslationZ="12dp" />
 
             <TextView
-                android:id="@+id/searchMovieTextView"
+                android:id="@+id/searchMovieTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
-                android:layout_marginBottom="98dp"
                 android:layout_marginRight="85dp"
+                android:layout_marginBottom="98dp"
                 android:background="@drawable/text_view_border"
-                android:textColor="@android:color/black"
                 android:elevation="6dp"
-                android:textSize="15dp"
                 android:text="Movies"
+                android:textColor="@android:color/black"
+                android:textSize="15dp"
                 android:visibility="invisible" />
 
 
             <TextView
-                android:id="@+id/searchShowTextView"
+                android:id="@+id/searchShowTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom|end"
-                android:layout_marginBottom="168dp"
                 android:layout_marginRight="85dp"
+                android:layout_marginBottom="168dp"
                 android:background="@drawable/text_view_border"
                 android:elevation="6dp"
                 android:text="TVShows"

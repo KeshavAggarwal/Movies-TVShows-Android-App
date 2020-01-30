@@ -4,8 +4,10 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.tabs.TabLayout;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.palette.graphics.Palette;
@@ -14,6 +16,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
+
 import android.os.Bundle;
 import android.util.Log;
 
@@ -54,16 +57,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class AboutMovieActivity extends AppCompatActivity implements InfoAboutMovieFragment.InfoAboutMovieFragmentListener {
 
-    /**
-     * The {@link PagerAdapter} that will provide
-     * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
-     * loaded fragment in memory. If this becomes too memory intensive, it
-     * may be best to switch to a
-     * {@link FragmentStatePagerAdapter}.
-     */
-    //private SectionsPagerAdapter mSectionsPagerAdapter;
-
     private BannerViewPagerAdapter bannerViewPagerAdapter;
     private ArrayList<String> allBannerImageFullLinks;
     ImageView poster;
@@ -95,28 +88,24 @@ public class AboutMovieActivity extends AppCompatActivity implements InfoAboutMo
         final String posterPath = intent.getStringExtra(IntentConstants.INTENT_KEY_POSTER_PATH);
         movieName = intent.getStringExtra(IntentConstants.INTENT_KEY_MOVIE_NAME);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         InfoAboutMovieFragment infoAboutMovieFragment = (InfoAboutMovieFragment) fragmentPager.function(0);
-        infoAboutMovieFragment.setInfoAboutMovieFragmentListener(AboutMovieActivity.this);
+        infoAboutMovieFragment.setInfoAboutMovieFragmentListener(this);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
         //mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
-        allBannerImageFullLinks = new ArrayList<String>();
+        allBannerImageFullLinks = new ArrayList<>();
 
         // Set up the ViewPager with the sections adapter.
         //mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        /*
-      The {@link ViewPager} that will host the section contents.
-     */
-        ViewPager mBannerViewPager = (ViewPager) findViewById(R.id.pager);
-        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
-
+        ViewPager mBannerViewPager = findViewById(R.id.pager);
+        radioGroup = findViewById(R.id.radioGroup);
 
         bannerViewPagerAdapter = new BannerViewPagerAdapter(this, allBannerImageFullLinks);
         mBannerViewPager.setAdapter(bannerViewPagerAdapter);
@@ -153,7 +142,6 @@ public class AboutMovieActivity extends AppCompatActivity implements InfoAboutMo
 
             @Override
             public void onPageScrollStateChanged(int state) {
-                Log.i("VIEWPAGER", String.valueOf(state));
 
             }
         });
@@ -171,12 +159,6 @@ public class AboutMovieActivity extends AppCompatActivity implements InfoAboutMo
                         collapsingToolbarLayout.setBackgroundColor(color);
                         collapsingToolbarLayout.setContentScrimColor(color);
                         tabLayout.setBackgroundColor(palette.getMutedColor(Color.parseColor("#424242")));
-
-                        /*Palette.Swatch swatch = palette.getMutedSwatch();
-                        if(swatch != null)
-                        tabLayout.setTabTextColors(swatch.getTitleTextColor(), Color.parseColor("#FFFFFF"));
-                        tabLayout.setSelectedTabIndicatorColor(swatch.getTitleTextColor());*/
-
                     }
                 });
 
@@ -195,14 +177,14 @@ public class AboutMovieActivity extends AppCompatActivity implements InfoAboutMo
         });
 
 
-        movieNameTextView = (TextView) findViewById(R.id.nameTextView);
+        movieNameTextView = findViewById(R.id.nameTextView);
         movieNameTextView.setText(movieName);
-        genreTextView = (TextView) findViewById(R.id.genreTextView);
-        releaseDateTextView = (TextView) findViewById(R.id.releaseDateTextView);
-        runTimeTextView = (TextView) findViewById(R.id.runTimeTextView);
+        genreTextView = findViewById(R.id.genreTextView);
+        releaseDateTextView = findViewById(R.id.releaseDateTextView);
+        runTimeTextView = findViewById(R.id.runTimeTextView);
 
-        tabLayout = (TabLayout) findViewById(R.id.tabLayout);
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        tabLayout = findViewById(R.id.tabLayout);
+        mViewPager = findViewById(R.id.container);
 
         tabLayout.addTab(tabLayout.newTab());
         tabLayout.addTab(tabLayout.newTab());

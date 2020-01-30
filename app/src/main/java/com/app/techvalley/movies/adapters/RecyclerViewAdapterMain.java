@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.app.techvalley.movies.AboutMovieActivity;
 import com.app.techvalley.movies.utils.IntentConstants;
-import com.app.techvalley.movies.OnRecyclerViewitemClicklistener;
+import com.app.techvalley.movies.OnRecyclerViewItemClickListener;
 import com.app.techvalley.movies.R;
 import com.app.techvalley.movies.SeeAllMoviesActivity;
 import com.app.techvalley.movies.network.MovieResponse;
@@ -23,7 +23,7 @@ import com.app.techvalley.movies.network.MovieResponse;
  * Created by KeshavAggarwal on 07/01/17.
  */
 
-public class RecyclerViewAdapterMain extends RecyclerView.Adapter<RecyclerViewAdapterMain.ViewHolder> implements OnRecyclerViewitemClicklistener {
+public class RecyclerViewAdapterMain extends RecyclerView.Adapter<RecyclerViewAdapterMain.ViewHolder> implements OnRecyclerViewItemClickListener {
 
     private MovieResponse[] mMovies;
     Context mContext;
@@ -156,14 +156,14 @@ public class RecyclerViewAdapterMain extends RecyclerView.Adapter<RecyclerViewAd
 
 
     @Override
-    public void onRecyclerViewItemClicked(int verticalposition, int horizontalPosition, View view) {
+    public void onRecyclerViewItemClicked(int verticalPosition, int horizontalPosition, View view) {
         Intent intent = new Intent();
         Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext, view, view.getTransitionName()).toBundle();
         //Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle();
         intent.setClass(mContext, AboutMovieActivity.class);
-        intent.putExtra(IntentConstants.INTENT_KEY_MOVIE_ID, mMovies[verticalposition].getMovies().get(horizontalPosition).getId());
-        intent.putExtra(IntentConstants.INTENT_KEY_POSTER_PATH, mMovies[verticalposition].getMovies().get(horizontalPosition).getPosterPath());
-        intent.putExtra(IntentConstants.INTENT_KEY_MOVIE_NAME, mMovies[verticalposition].getMovies().get(horizontalPosition).getTitle());
+        intent.putExtra(IntentConstants.INTENT_KEY_MOVIE_ID, mMovies[verticalPosition].getMovies().get(horizontalPosition).getId());
+        intent.putExtra(IntentConstants.INTENT_KEY_POSTER_PATH, mMovies[verticalPosition].getMovies().get(horizontalPosition).getPosterPath());
+        intent.putExtra(IntentConstants.INTENT_KEY_MOVIE_NAME, mMovies[verticalPosition].getMovies().get(horizontalPosition).getTitle());
         mContext.startActivity(intent, bundle);
         //Toast.makeText(mContext,mMovies[verticalposition].getMovies().get(horizontalPosition).id + " is clicked", Toast.LENGTH_SHORT).show();
 
