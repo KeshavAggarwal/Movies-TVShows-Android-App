@@ -25,3 +25,5 @@ Project.xml
 # Built application files
 *.apk
 *.ap_
+
+.idea/
