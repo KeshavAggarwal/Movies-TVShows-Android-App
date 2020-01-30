@@ -5,8 +5,10 @@ import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -52,17 +54,14 @@ public class RecyclerAdapterSearchTvShows extends RecyclerView.Adapter<RecyclerA
             }
             String rating = Double.toString(mTvShows.get(position).getRating());
             holder.rating.setText(rating);
-            holder.cv.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent();
-                    Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext, holder.thumbnailImage, holder.thumbnailImage.getTransitionName()).toBundle();
-                    intent.setClass(mContext, AboutTVShowActivity.class);
-                    intent.putExtra(IntentConstants.INTENT_KEY_TVSHOW_ID, mTvShows.get(position).getId());
-                    intent.putExtra(IntentConstants.INTENT_KEY_POSTER_PATH, mTvShows.get(position).getPosterPath());
-                    intent.putExtra(IntentConstants.INTENT_KEY_TVSHOW_NAME, mTvShows.get(position).getTitle());
-                    mContext.startActivity(intent, bundle);
-                }
+            holder.cv.setOnClickListener(v -> {
+                Intent intent = new Intent();
+                Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext, holder.thumbnailImage, holder.thumbnailImage.getTransitionName()).toBundle();
+                intent.setClass(mContext, AboutTVShowActivity.class);
+                intent.putExtra(IntentConstants.INTENT_KEY_TVSHOW_ID, mTvShows.get(position).getId());
+                intent.putExtra(IntentConstants.INTENT_KEY_POSTER_PATH, mTvShows.get(position).getPosterPath());
+                intent.putExtra(IntentConstants.INTENT_KEY_TVSHOW_NAME, mTvShows.get(position).getTitle());
+                mContext.startActivity(intent, bundle);
             });
         }
 

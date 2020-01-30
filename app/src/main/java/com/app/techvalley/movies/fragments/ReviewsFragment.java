@@ -3,10 +3,12 @@ package com.app.techvalley.movies.fragments;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,11 +25,11 @@ import java.util.ArrayList;
  */
 
 public class ReviewsFragment extends Fragment {
-    RecyclerView recyclerView;
-    RecyclerViewAdapterReviews recyclerViewAdapterReviews;
-    Context context;
-    ArrayList<Review> reviewsMain;
-    TextView noReviewTextView;
+    private RecyclerView recyclerView;
+    private RecyclerViewAdapterReviews recyclerViewAdapterReviews;
+    private Context context;
+    private ArrayList<Review> reviewsMain;
+    private TextView noReviewTextView;
 
 
     @Nullable
@@ -35,7 +37,6 @@ public class ReviewsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         context = getActivity();
         View v = inflater.inflate(R.layout.fragment_reviews, container, false);
-
         recyclerView = v.findViewById(R.id.reviewsRecyclerView);
         noReviewTextView = v.findViewById(R.id.noReviewsTextView);
         reviewsMain = new ArrayList<>();

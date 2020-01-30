@@ -9,7 +9,7 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.app.techvalley.movies.adapters.RecyclerViewAdpterSeeAllActivity;
+import com.app.techvalley.movies.adapters.RecyclerViewAdapterSeeAllActivity;
 import com.app.techvalley.movies.models.Movie;
 import com.app.techvalley.movies.network.ApiService;
 import com.app.techvalley.movies.network.MovieResponse;
@@ -30,7 +30,7 @@ public class SeeAllSimilarMoviesActivity extends AppCompatActivity {
     private EndlessRecyclerViewScrollListener scrollListener;
     RecyclerView recyclerView;
     ProgressBar progressBarSeeAllActivity;
-    RecyclerViewAdpterSeeAllActivity recyclerViewAdpterSeeAllActivity;
+    RecyclerViewAdapterSeeAllActivity recyclerViewAdpterSeeAllActivity;
     ArrayList<Movie> movies;
     int movie_id;
     String movieName;
@@ -66,7 +66,7 @@ public class SeeAllSimilarMoviesActivity extends AppCompatActivity {
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.spacing);
         recyclerView.addItemDecoration(new SpacesItemDecoration(spacingInPixels));
 
-        recyclerViewAdpterSeeAllActivity = new RecyclerViewAdpterSeeAllActivity(movies, this);
+        recyclerViewAdpterSeeAllActivity = new RecyclerViewAdapterSeeAllActivity(movies, this);
         recyclerView.setAdapter(recyclerViewAdpterSeeAllActivity);
 
         final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);

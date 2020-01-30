@@ -67,7 +67,7 @@
             android:indeterminateTintMode="src_in" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/search_results"
+            android:id="@+id/searchResultsRV"
             android:layout_width="match_parent"
             android:visibility="gone"
             android:layout_height="match_parent"

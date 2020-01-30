@@ -39,37 +39,33 @@ public class SearchMovieActivity extends AppCompatActivity {
     android.widget.SearchView searchView;
     ImageButton searchBack;
     ProgressBar progress;
-    MoviesSearchAdapter recyclerAdapterSearchMovies;
-    RecyclerView searchResults;
-    ArrayList<Movie> mainSearchedmovies;
+    MoviesSearchAdapter adapter;
+    RecyclerView searchResultsRV;
+    ArrayList<Movie> data;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         searchView = findViewById(R.id.search_view);
-
         searchView.setQueryHint("Search Movies");
         searchView.setInputType(InputType.TYPE_TEXT_FLAG_CAP_WORDS);
         searchView.setImeOptions(searchView.getImeOptions() | EditorInfo.IME_ACTION_SEARCH |
                 EditorInfo.IME_FLAG_NO_EXTRACT_UI | EditorInfo.IME_FLAG_NO_FULLSCREEN);
         progress = findViewById(R.id.progressBar);
-        searchResults = findViewById(R.id.search_results);
+        searchResultsRV = findViewById(R.id.searchResultsRV);
         searchBack = findViewById(R.id.searchback);
 
-        mainSearchedmovies = new ArrayList<>();
+        data = new ArrayList<>();
 
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.spacing);
-        searchResults.addItemDecoration(new SpacesItemDecoration(spacingInPixels));
-
-        recyclerAdapterSearchMovies = new MoviesSearchAdapter(mainSearchedmovies, this);
-        searchResults.setAdapter(recyclerAdapterSearchMovies);
-
         final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, RecyclerView.VERTICAL, false);
-        searchResults.setLayoutManager(gridLayoutManager);
+        searchResultsRV.setLayoutManager(gridLayoutManager);
+        searchResultsRV.addItemDecoration(new SpacesItemDecoration(spacingInPixels));
+        adapter = new MoviesSearchAdapter(data, this);
+        searchResultsRV.setAdapter(adapter);
 
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
 
@@ -84,15 +80,15 @@ public class SearchMovieActivity extends AppCompatActivity {
 
                     }
                 };
-                searchResults.addOnScrollListener(scrollListener);
+                searchResultsRV.addOnScrollListener(scrollListener);
                 return true;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-                searchResults.setVisibility(View.GONE);
+                searchResultsRV.setVisibility(View.GONE);
                 progress.setVisibility(View.GONE);
-                mainSearchedmovies.clear();
+                data.clear();
                 return true;
             }
         });
@@ -101,7 +97,7 @@ public class SearchMovieActivity extends AppCompatActivity {
     private void searchFor(String query, int page) {
         if (page == 1)
             progress.setVisibility(View.VISIBLE);
-        searchResults.setVisibility(View.VISIBLE);
+        searchResultsRV.setVisibility(View.VISIBLE);
         searchView.clearFocus();
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -121,12 +117,9 @@ public class SearchMovieActivity extends AppCompatActivity {
                     return;
                 }
                 for (Movie obj : searchMovieList) {
-                    mainSearchedmovies.add(obj);
+                    data.add(obj);
                 }
-
-                recyclerAdapterSearchMovies.notifyDataSetChanged();
-
-
+                adapter.notifyDataSetChanged();
             }
 
             @Override
@@ -137,9 +130,6 @@ public class SearchMovieActivity extends AppCompatActivity {
 
         searchBack.setOnClickListener(v -> {
             onBackPressed();
-            /*Intent intent = new Intent();
-            intent.setClass(SearchMovieActivity.this, MainActivity.class);
-            startActivity(intent);*/
         });
     }
 

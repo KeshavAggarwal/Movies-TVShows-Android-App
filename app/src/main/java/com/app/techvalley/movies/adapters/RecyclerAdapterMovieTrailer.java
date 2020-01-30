@@ -43,14 +43,11 @@ public class RecyclerAdapterMovieTrailer extends RecyclerView.Adapter<RecyclerAd
             Picasso.get().load(URLConstants.TRAILER_THUMBNAIL_IMAGE_URL + mTrailerMoviesArraylist.get(position).getKey() + "/hqdefault.jpg").into(holder.trailerThumbnail);
             holder.trailerThumbnailName.setText(mTrailerMoviesArraylist.get(position).getName());
 
-            holder.trailerCardView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent();
-                    intent.setClass(mContext, YouTubeActivity.class);
-                    intent.putExtra("VIDEO_KEY", mTrailerMoviesArraylist.get(position).getKey());
-                    mContext.startActivity(intent);
-                }
+            holder.trailerCardView.setOnClickListener(v -> {
+                Intent intent = new Intent();
+                intent.setClass(mContext, YouTubeActivity.class);
+                intent.putExtra("VIDEO_KEY", mTrailerMoviesArraylist.get(position).getKey());
+                mContext.startActivity(intent);
             });
         }
 

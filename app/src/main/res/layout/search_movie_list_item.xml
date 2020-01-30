@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cardView"
+    android:id="@+id/rootCV"
     android:layout_width="160dp"
     android:layout_height="280dp"
     android:layout_marginBottom="8dp"
@@ -13,17 +13,17 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/thumbnailImageView"
+            android:id="@+id/thumbnailIV"
             android:layout_width="match_parent"
             android:layout_height="170dp"
             android:scaleType="fitXY"
             android:transitionName="posterImageTransition" />
 
         <TextView
-            android:id="@+id/nameTextView"
+            android:id="@+id/nameTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/thumbnailImageView"
+            android:layout_below="@+id/thumbnailIV"
             android:layout_marginTop="5dp"
             android:gravity="left"
             android:paddingLeft="5dp"
@@ -31,16 +31,16 @@
             android:textSize="15dp" />
 
         <TextView
-            android:id="@+id/releaseDateTextView"
+            android:id="@+id/releaseDateTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/nameTextView"
+            android:layout_below="@id/nameTV"
             android:layout_marginTop="1dp"
             android:paddingLeft="5dp"
             android:textSize="12dp" />
 
         <TextView
-            android:id="@+id/ratingTextView"
+            android:id="@+id/ratingTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

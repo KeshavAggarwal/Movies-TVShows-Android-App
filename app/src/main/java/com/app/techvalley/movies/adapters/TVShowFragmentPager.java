@@ -14,7 +14,7 @@ import java.util.HashMap;
  */
 
 public class TVShowFragmentPager extends FragmentPagerAdapter {
-    HashMap<Integer, Fragment> map = new HashMap<>();
+    private HashMap<Integer, Fragment> map = new HashMap<>();
 
     public TVShowFragmentPager(FragmentManager fm) {
         super(fm);
@@ -24,7 +24,7 @@ public class TVShowFragmentPager extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch (position) {
             case 0:
-                map.put(position, InfoAboutTVShowFragment.newInstance().newInstance());
+                map.put(position, InfoAboutTVShowFragment.newInstance());
                 return map.get(position);
             case 1:
                 map.put(position, CastTVShowFragment.newInstance());

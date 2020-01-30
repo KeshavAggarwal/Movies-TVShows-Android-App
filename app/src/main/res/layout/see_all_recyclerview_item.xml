@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/cardView"
+    android:id="@+id/rootCV"
     android:layout_width="160dp"
     android:layout_height="280dp"
-    app:cardPreventCornerOverlap="true"
+    android:layout_marginBottom="8dp"
     app:cardCornerRadius="0dp"
-    android:layout_marginBottom="8dp">
+    app:cardPreventCornerOverlap="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <ImageView
-            android:id="@+id/thumbnailImageView"
+            android:id="@+id/thumbnailIV"
             android:layout_width="match_parent"
             android:layout_height="170dp"
-            android:transitionName="posterImageTransition"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:transitionName="posterImageTransition" />
 
         <TextView
-            android:id="@+id/nameTextView"
+            android:id="@+id/nameTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="left"
+            android:layout_below="@+id/thumbnailIV"
             android:layout_marginTop="5dp"
-            android:textSize="15dp"
+            android:gravity="left"
             android:paddingLeft="5dp"
-            android:layout_below="@+id/thumbnailImageView"
-            android:textColor="@android:color/black" />
+            android:textColor="@android:color/black"
+            android:textSize="15dp" />
 
         <TextView
+            android:id="@+id/releaseDateTV"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/releaseDateTextView"
-            android:paddingLeft="5dp"
+            android:layout_below="@id/nameTV"
             android:layout_marginTop="1dp"
-            android:layout_below="@id/nameTextView"
-            android:textSize="12dp"/>
+            android:paddingLeft="5dp"
+            android:textSize="12dp" />
 
         <TextView
+            android:id="@+id/ratingTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ratingTextView"
-            android:paddingLeft="4dp"
             android:layout_alignParentBottom="true"
-            android:textColor="@android:color/black"
             android:layout_marginBottom="5dp"
-            android:textSize="14dp"
+            android:drawableRight="@drawable/ic_star"
             android:drawablePadding="3dp"
-            android:drawableRight="@drawable/ic_star"/>
+            android:paddingLeft="4dp"
+            android:textColor="@android:color/black"
+            android:textSize="14dp" />
 
 
     </RelativeLayout>

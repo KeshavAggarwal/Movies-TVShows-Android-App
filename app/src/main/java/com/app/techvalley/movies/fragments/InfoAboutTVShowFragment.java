@@ -57,8 +57,6 @@ public class InfoAboutTVShowFragment extends Fragment {
     public static InfoAboutTVShowFragment newInstance() {
         InfoAboutTVShowFragment infoAboutTVShowFragment = new InfoAboutTVShowFragment();
         return infoAboutTVShowFragment;
-
-
     }
 
     public void setUIArguements(final Bundle args) {

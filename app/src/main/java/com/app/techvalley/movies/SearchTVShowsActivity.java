@@ -3,10 +3,14 @@ package com.app.techvalley.movies;
 import android.app.SearchManager;
 import android.content.Context;
 import android.content.Intent;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
+
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.text.InputType;
 import android.text.TextUtils;
 import android.view.View;
@@ -36,36 +40,31 @@ public class SearchTVShowsActivity extends AppCompatActivity {
     private EndlessRecyclerViewScrollListener scrollListener;
     ProgressBar progress;
     RecyclerAdapterSearchTvShows recyclerAdapterSearchTvShows;
-    RecyclerView searchResults;
-    ArrayList<TVShow> mainSearchedShows;
+    RecyclerView searchResultsRV;
+    ArrayList<TVShow> data;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
-
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         searchView = findViewById(R.id.search_view);
-
         searchView.setQueryHint("Search TVShows");
         searchView.setInputType(InputType.TYPE_TEXT_FLAG_CAP_WORDS);
         searchView.setImeOptions(searchView.getImeOptions() | EditorInfo.IME_ACTION_SEARCH |
                 EditorInfo.IME_FLAG_NO_EXTRACT_UI | EditorInfo.IME_FLAG_NO_FULLSCREEN);
         progress = findViewById(R.id.progressBar);
-        searchResults = findViewById(R.id.search_results);
+        searchResultsRV = findViewById(R.id.searchResultsRV);
         searchBack = findViewById(R.id.searchback);
-
-        mainSearchedShows = new ArrayList<>();
+        data = new ArrayList<>();
 
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.spacing);
-        searchResults.addItemDecoration(new SpacesItemDecoration(spacingInPixels));
-
-        recyclerAdapterSearchTvShows = new RecyclerAdapterSearchTvShows(mainSearchedShows, this);
-        searchResults.setAdapter(recyclerAdapterSearchTvShows);
-
-        final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
-        searchResults.setLayoutManager(gridLayoutManager);
+        final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, RecyclerView.VERTICAL, false);
+        searchResultsRV.setLayoutManager(gridLayoutManager);
+        searchResultsRV.addItemDecoration(new SpacesItemDecoration(spacingInPixels));
+        recyclerAdapterSearchTvShows = new RecyclerAdapterSearchTvShows(data, this);
+        searchResultsRV.setAdapter(recyclerAdapterSearchTvShows);
 
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
 
@@ -81,16 +80,16 @@ public class SearchTVShowsActivity extends AppCompatActivity {
 
                     }
                 };
-                searchResults.addOnScrollListener(scrollListener);
+                searchResultsRV.addOnScrollListener(scrollListener);
                 return true;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
                 if (TextUtils.isEmpty(newText)) {
-                    searchResults.setVisibility(View.GONE);
+                    searchResultsRV.setVisibility(View.GONE);
                     progress.setVisibility(View.GONE);
-                    mainSearchedShows.clear();
+                    data.clear();
                 }
                 return true;
             }
@@ -100,7 +99,7 @@ public class SearchTVShowsActivity extends AppCompatActivity {
     private void searchFor(String query, int page) {
         if (page == 1)
             progress.setVisibility(View.VISIBLE);
-        searchResults.setVisibility(View.VISIBLE);
+        searchResultsRV.setVisibility(View.VISIBLE);
         searchView.clearFocus();
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -120,7 +119,7 @@ public class SearchTVShowsActivity extends AppCompatActivity {
                     return;
                 }
                 for (TVShow obj : searchShowsList) {
-                    mainSearchedShows.add(obj);
+                    data.add(obj);
                 }
 
                 recyclerAdapterSearchTvShows.notifyDataSetChanged();
@@ -136,9 +135,6 @@ public class SearchTVShowsActivity extends AppCompatActivity {
 
         searchBack.setOnClickListener(v -> {
             onBackPressed();
-            /*Intent intent = new Intent();
-            intent.setClass(SearchMovieActivity.this, MainActivity.class);
-            startActivity(intent);*/
         });
     }
 
