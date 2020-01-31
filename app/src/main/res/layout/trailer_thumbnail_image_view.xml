@@ -3,14 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/trailerCardView"
     android:layout_width="218dp"
-    android:layout_height="190dp"
+    android:layout_height="wrap_content"
     android:layout_marginStart="16dp"
-    android:layout_marginLeft="16dp"
-    app:cardCornerRadius="0dp"
-    app:cardPreventCornerOverlap="false">
+    app:cardCornerRadius="2dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true">
 
     <RelativeLayout
-
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -38,8 +37,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/trailerFrameLayout"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"
-            android:fontFamily="@font/proximanova_regular_webfont" />
+            android:layout_marginBottom="4dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/proximanova_regular_webfont"
+            android:maxLines="2"
+            android:padding="6dp" />
     </RelativeLayout>
 
 
