@@ -14,10 +14,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:fontFamily="@font/proximanova_regular_webfont"
+            android:fontFamily="@font/proximanova_semibold_webfont"
             android:text="About the Film"
-            android:textColor="@color/text1"
-            android:textSize="16sp" />
+            android:textColor="@color/text1"/>
 
         <TextView
             android:id="@+id/aboutFilmTextView"
@@ -38,10 +37,9 @@
             android:layout_below="@id/aboutFilmTextView"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="15dp"
-            android:fontFamily="@font/proximanova_regular_webfont"
+            android:fontFamily="@font/proximanova_semibold_webfont"
             android:text="Released:"
-            android:textColor="@color/text1"
-            android:textSize="16sp" />
+            android:textColor="@color/text1"/>
 
         <TextView
             android:id="@+id/releasedTextView"
@@ -49,6 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/releasedTextViewLabel"
             android:layout_marginLeft="5dp"
+            android:textSize="16sp"
             android:layout_toRightOf="@+id/releasedTextViewLabel" />
 
         <TextView
@@ -58,10 +57,9 @@
             android:layout_below="@+id/releasedTextViewLabel"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/proximanova_regular_webfont"
+            android:fontFamily="@font/proximanova_semibold_webfont"
             android:text="Budget:"
-            android:textColor="@color/text1"
-            android:textSize="16sp" />
+            android:textColor="@color/text1"/>
 
         <TextView
             android:id="@+id/budgetTextView"
@@ -69,6 +67,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/budgetTextViewLabel"
             android:layout_marginLeft="5dp"
+            android:textSize="16sp"
             android:layout_toRightOf="@+id/budgetTextViewLabel"
             android:fontFamily="@font/proximanova_regular_webfont" />
 
@@ -79,10 +78,9 @@
             android:layout_below="@+id/budgetTextViewLabel"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/proximanova_regular_webfont"
+            android:fontFamily="@font/proximanova_semibold_webfont"
             android:text="Revenue:"
-            android:textColor="@color/text1"
-            android:textSize="16sp" />
+            android:textColor="@color/text1"/>
 
         <TextView
             android:id="@+id/revenueTextView"
@@ -90,6 +88,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/revenueTextViewLabel"
             android:layout_marginStart="5dp"
+            android:textSize="16sp"
             android:layout_toEndOf="@+id/revenueTextViewLabel"
             android:fontFamily="@font/proximanova_regular_webfont" />
 
@@ -100,10 +99,10 @@
             android:layout_below="@+id/revenueTextViewLabel"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/proximanova_regular_webfont"
+            android:fontFamily="@font/proximanova_semibold_webfont"
             android:text="Trailors"
-            android:textColor="@color/text1"
-            android:textSize="16sp" />
+            android:textSize="18sp"
+            android:textColor="@color/text1"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/trailorsRecyclerView"
@@ -129,10 +128,10 @@
             android:layout_below="@+id/trailorsRecyclerView"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/proximanova_regular_webfont"
+            android:fontFamily="@font/proximanova_semibold_webfont"
             android:text="Similar Movies"
-            android:textColor="@color/text1"
-            android:textSize="16sp" />
+            android:textSize="18sp"
+            android:textColor="@color/text1" />
 
         <TextView
             android:id="@+id/seeAllTextViewMovieInfoFragment"

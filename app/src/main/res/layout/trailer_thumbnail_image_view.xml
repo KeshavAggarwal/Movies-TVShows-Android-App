@@ -4,8 +4,8 @@
     android:id="@+id/trailerCardView"
     android:layout_width="218dp"
     android:layout_height="190dp"
-    android:layout_marginLeft="16dp"
     android:layout_marginStart="16dp"
+    android:layout_marginLeft="16dp"
     app:cardCornerRadius="0dp"
     app:cardPreventCornerOverlap="false">
 
@@ -15,9 +15,9 @@
         android:layout_height="match_parent">
 
         <FrameLayout
+            android:id="@+id/trailerFrameLayout"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:id="@+id/trailerFrameLayout">
+            android:layout_height="150dp">
 
             <ImageView
                 android:id="@+id/trailerThumbnail"
@@ -29,17 +29,17 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:background="@drawable/ic_play_circle_filled_white_18px"></View>
+                android:background="@drawable/ic_play_circle_filled_white_18px" />
         </FrameLayout>
 
         <TextView
             android:id="@+id/trailerThumbnailName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/proximanova_regular_webfont"
             android:layout_below="@+id/trailerFrameLayout"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/proximanova_regular_webfont" />
     </RelativeLayout>
 
 

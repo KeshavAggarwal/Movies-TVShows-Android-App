@@ -57,7 +57,7 @@
             android:layout_below="@+id/reviewSubheadingTV"
             android:layout_alignParentStart="true"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="13dp"
+            android:layout_marginTop="18dp"
             android:layout_marginEnd="10dp"
             android:ellipsize="end"
             android:fontFamily="@font/proximanova_regular_webfont"

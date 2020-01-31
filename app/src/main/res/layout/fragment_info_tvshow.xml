@@ -14,10 +14,9 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:fontFamily="@font/proximanova_regular_webfont"
+            android:fontFamily="@font/proximanova_semibold_webfont"
             android:text="About the Show"
-            android:textColor="@color/text1"
-            android:textSize="16sp" />
+            android:textColor="@color/text1" />
 
         <TextView
             android:id="@+id/aboutTvShowTextView"
@@ -38,10 +37,9 @@
             android:layout_below="@id/aboutTvShowTextView"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="15dp"
-            android:fontFamily="@font/proximanova_regular_webfont"
+            android:fontFamily="@font/proximanova_semibold_webfont"
             android:text="First Air Date:"
-            android:textColor="@color/text1"
-            android:textSize="16sp" />
+            android:textColor="@color/text1" />
 
         <TextView
             android:id="@+id/firstAirDateTextView"
@@ -50,6 +48,7 @@
             android:layout_alignBaseline="@+id/firstAirDateLabel"
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@+id/firstAirDateLabel"
+            android:textSize="16sp"
             android:fontFamily="@font/proximanova_regular_webfont" />
 
         <TextView
@@ -59,10 +58,9 @@
             android:layout_below="@+id/firstAirDateLabel"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/proximanova_regular_webfont"
+            android:fontFamily="@font/proximanova_semibold_webfont"
             android:text="Last Air Date:"
-            android:textColor="@color/text1"
-            android:textSize="16sp" />
+            android:textColor="@color/text1"/>
 
         <TextView
             android:id="@+id/lastAirDateTextView"
@@ -70,6 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/lastAirDateLabel"
             android:layout_marginLeft="5dp"
+            android:textSize="16sp"
             android:layout_toRightOf="@+id/lastAirDateLabel"
             android:fontFamily="@font/proximanova_regular_webfont" />
 
@@ -80,10 +79,9 @@
             android:layout_below="@+id/lastAirDateLabel"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/proximanova_regular_webfont"
+            android:fontFamily="@font/proximanova_semibold_webfont"
             android:text="Created By:"
-            android:textColor="@color/text1"
-            android:textSize="16sp" />
+            android:textColor="@color/text1" />
 
         <TextView
             android:id="@+id/createdByTextView"
@@ -93,6 +91,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginBottom="5dp"
             android:layout_toRightOf="@+id/createdByLabel"
+            android:textSize="16sp"
             android:fontFamily="@font/proximanova_regular_webfont" />
 
         <TextView
@@ -102,10 +101,9 @@
             android:layout_below="@+id/createdByLabel"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/proximanova_regular_webfont"
+            android:fontFamily="@font/proximanova_semibold_webfont"
             android:text="Show Type:"
-            android:textColor="@color/text1"
-            android:textSize="16sp" />
+            android:textColor="@color/text1" />
 
         <TextView
             android:id="@+id/showTypeTextView"
@@ -115,6 +113,7 @@
             android:layout_marginLeft="5dp"
             android:layout_marginTop="10dp"
             android:layout_toRightOf="@+id/showTypeLabel"
+            android:textSize="16sp"
             android:fontFamily="@font/proximanova_regular_webfont" />
 
         <TextView
@@ -124,10 +123,9 @@
             android:layout_below="@+id/showTypeLabel"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/proximanova_regular_webfont"
+            android:fontFamily="@font/proximanova_semibold_webfont"
             android:text="Show Status:"
-            android:textColor="@color/text1"
-            android:textSize="16sp" />
+            android:textColor="@color/text1" />
 
         <TextView
             android:id="@+id/showStatusTextView"
@@ -136,6 +134,7 @@
             android:layout_alignBaseline="@+id/showStatusLabel"
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@+id/showStatusLabel"
+            android:textSize="16sp"
             android:fontFamily="@font/proximanova_regular_webfont" />
 
         <TextView
@@ -145,10 +144,10 @@
             android:layout_below="@+id/showStatusLabel"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/proximanova_regular_webfont"
+            android:fontFamily="@font/proximanova_semibold_webfont"
             android:text="Trailors"
             android:textColor="@color/text1"
-            android:textSize="16sp" />
+            android:textSize="18sp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/trailorsTvShowRecyclerView"

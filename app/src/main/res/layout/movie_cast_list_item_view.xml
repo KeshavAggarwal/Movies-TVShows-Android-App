@@ -20,7 +20,8 @@
         android:layout_marginLeft="5dp"
         android:layout_toRightOf="@id/movieCastIV"
         android:fontFamily="@font/proximanova_regular_webfont"
-        android:textColor="@color/text1" />
+        android:textColor="@color/text1"
+        android:textSize="16sp" />
 
     <TextView
         android:id="@+id/castCharacterTV"
