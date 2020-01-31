@@ -4,8 +4,6 @@
     android:id="@+id/similarMoviesCardView"
     android:layout_width="140dp"
     android:layout_height="300dp"
-    android:layout_marginStart="16dp"
-    android:layout_marginLeft="16dp"
     android:layout_marginBottom="16dp"
     app:cardCornerRadius="2dp"
     app:cardPreventCornerOverlap="false">

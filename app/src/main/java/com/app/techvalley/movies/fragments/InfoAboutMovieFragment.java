@@ -16,6 +16,8 @@ import com.app.techvalley.movies.R;
 import com.app.techvalley.movies.models.Trailer;
 import com.app.techvalley.movies.adapters.RecyclerAdapterMovieTrailer;
 import com.app.techvalley.movies.adapters.RecyclerAdapterSimilarMovies;
+import com.app.techvalley.movies.utils.AppUtil;
+import com.app.techvalley.movies.utils.HorizontalItemDecoration;
 
 import java.util.ArrayList;
 
@@ -25,21 +27,21 @@ import java.util.ArrayList;
 
 public class InfoAboutMovieFragment extends Fragment {
 
-    TextView abouFilmTextView;
-    TextView releasedTextView;
-    TextView budgetTextView;
-    TextView seeAlltextViewMovieInfofragment;
-    TextView noReviewMovieTextView;
-    TextView noSimilarMoviesTextView;
-    TextView revenueTextView;
-    RecyclerView trailorsRecyclerView;
-    RecyclerView similarMoviesRecyclerView;
-    RecyclerAdapterMovieTrailer recyclerAdapterMovieTrailer;
-    RecyclerAdapterSimilarMovies recyclerAdapterSimilarMovies;
-    Context context;
-    ArrayList<Movie> mainSimilarMovies;
-    ArrayList<Trailer> mainTrailerMoviesThumbnails;
-    InfoAboutMovieFragmentListener infoAboutMovieFragmentListener;
+    private TextView abouFilmTextView;
+    private TextView releasedTextView;
+    private TextView budgetTextView;
+    private TextView seeAlltextViewMovieInfofragment;
+    private TextView noReviewMovieTextView;
+    private TextView noSimilarMoviesTextView;
+    private TextView revenueTextView;
+    private RecyclerView trailorsRecyclerView;
+    private RecyclerView similarMoviesRecyclerView;
+    private RecyclerAdapterMovieTrailer recyclerAdapterMovieTrailer;
+    private RecyclerAdapterSimilarMovies recyclerAdapterSimilarMovies;
+    private Context context;
+    private ArrayList<Movie> mainSimilarMovies;
+    private ArrayList<Trailer> mainTrailerMoviesThumbnails;
+    private InfoAboutMovieFragmentListener infoAboutMovieFragmentListener;
 
     @Override
     public void onAttach(Context context) {
@@ -75,7 +77,6 @@ public class InfoAboutMovieFragment extends Fragment {
         similarMoviesRecyclerView = v.findViewById(R.id.similarMoviesRecyclerView);
         seeAlltextViewMovieInfofragment = v.findViewById(R.id.seeAllTextViewMovieInfoFragment);
         seeAlltextViewMovieInfofragment.setOnClickListener(v1 -> infoAboutMovieFragmentListener.onSeeAllSimilarMoviesClicked());
-
         return v;
     }
 
@@ -109,11 +110,10 @@ public class InfoAboutMovieFragment extends Fragment {
                         noReviewMovieTextView.setText("No Trailers are currently available.");
                     } else {
                         recyclerAdapterMovieTrailer = new RecyclerAdapterMovieTrailer(mainTrailerMoviesThumbnails, context);
-                        trailorsRecyclerView.setAdapter(recyclerAdapterMovieTrailer);
-
                         LinearLayoutManager HorizontalManager = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
+                        trailorsRecyclerView.addItemDecoration(new HorizontalItemDecoration(AppUtil.dpToPx(context, 16), AppUtil.dpToPx(context, 6), AppUtil.dpToPx(context, 16)));
                         trailorsRecyclerView.setLayoutManager(HorizontalManager);
-
+                        trailorsRecyclerView.setAdapter(recyclerAdapterMovieTrailer);
                     }
 
                 } else if (args.getBoolean("SIMILAR")) {
@@ -123,10 +123,10 @@ public class InfoAboutMovieFragment extends Fragment {
                         noSimilarMoviesTextView.setText("No Similar Movies are currently available.");
                     } else {
                         recyclerAdapterSimilarMovies = new RecyclerAdapterSimilarMovies(mainSimilarMovies, context);
-                        similarMoviesRecyclerView.setAdapter(recyclerAdapterSimilarMovies);
-
                         LinearLayoutManager HorizontalManager1 = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
+                        similarMoviesRecyclerView.addItemDecoration(new HorizontalItemDecoration(AppUtil.dpToPx(context, 16), AppUtil.dpToPx(context, 6), AppUtil.dpToPx(context, 16)));
                         similarMoviesRecyclerView.setLayoutManager(HorizontalManager1);
+                        similarMoviesRecyclerView.setAdapter(recyclerAdapterSimilarMovies);
                     }
                 }
 

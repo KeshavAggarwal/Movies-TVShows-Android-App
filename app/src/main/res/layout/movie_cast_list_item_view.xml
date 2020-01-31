@@ -1,38 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:layout_height="wrap_content">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/movieCastIV"
         android:layout_width="75dp"
         android:layout_height="75dp"
-        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp" />
 
-    <TextView
-        android:id="@+id/nameTV"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginLeft="5dp"
-        android:layout_toRightOf="@id/movieCastIV"
-        android:fontFamily="@font/proximanova_regular_webfont"
-        android:textColor="@color/text1"
-        android:textSize="16sp" />
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp"
+        android:layout_toEndOf="@id/movieCastIV"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/castCharacterTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="25dp"
-        android:layout_toRightOf="@+id/nameTV"
-        android:fontFamily="@font/proximanova_regular_webfont"
-        android:textColor="@color/subtext1"
-        android:textStyle="italic" />
+        <TextView
+            android:id="@+id/nameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proximanova_regular_webfont"
+            android:textColor="@color/text1"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/castCharacterTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/proximanova_regular_webfont"
+            android:textColor="@color/subtext1"
+            android:textStyle="italic" />
+
+    </LinearLayout>
 
     <View
         android:id="@+id/dividerV"

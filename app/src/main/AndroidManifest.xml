@@ -19,8 +19,7 @@
 
         <activity
             android:name="com.app.techvalley.movies.SeeAllMoviesActivity"
-            android:label="@string/title_activity_main3"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_main3"/>
 
         <activity
             android:name="com.app.techvalley.movies.MainActivity"
@@ -40,8 +39,7 @@
 
         <activity
             android:name="com.app.techvalley.movies.SeeAllTVShowsActivity"
-            android:label="@string/title_activity_see_all_tvshows"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="@string/title_activity_see_all_tvshows" />
 
         <activity
             android:name="com.app.techvalley.movies.SearchMovieActivity"

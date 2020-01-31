@@ -14,7 +14,9 @@ import com.app.techvalley.movies.models.Movie;
 import com.app.techvalley.movies.network.ApiService;
 import com.app.techvalley.movies.network.MovieResponse;
 import com.app.techvalley.movies.network.URLConstants;
+import com.app.techvalley.movies.utils.AppUtil;
 import com.app.techvalley.movies.utils.EndlessRecyclerViewScrollListener;
+import com.app.techvalley.movies.utils.GridSpacingItemDecoration;
 import com.app.techvalley.movies.utils.IntentConstants;
 import com.app.techvalley.movies.utils.SpacesItemDecoration;
 
@@ -60,17 +62,17 @@ public class SeeAllSimilarMoviesActivity extends AppCompatActivity {
         setTitle("Similar to " + movieName);
         movies = new ArrayList<>();
 
-        recyclerView = (RecyclerView) findViewById(R.id.seeAllActivityRecyclerViewMovies);
+        recyclerView = findViewById(R.id.seeAllActivityRecyclerViewMovies);
 
 
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.spacing);
         recyclerView.addItemDecoration(new SpacesItemDecoration(spacingInPixels));
 
         recyclerViewAdpterSeeAllActivity = new RecyclerViewAdapterSeeAllActivity(movies, this);
-        recyclerView.setAdapter(recyclerViewAdpterSeeAllActivity);
-
-        final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
+        final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, RecyclerView.VERTICAL, false);
+        recyclerView.addItemDecoration(new GridSpacingItemDecoration(2, AppUtil.dpToPx(this, 16), true));
         recyclerView.setLayoutManager(gridLayoutManager);
+        recyclerView.setAdapter(recyclerViewAdpterSeeAllActivity);
         loadmoreData(1);
 
         scrollListener = new EndlessRecyclerViewScrollListener(gridLayoutManager) {

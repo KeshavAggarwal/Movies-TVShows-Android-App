@@ -23,7 +23,9 @@ import com.app.techvalley.movies.models.TVShow;
 import com.app.techvalley.movies.network.ApiService;
 import com.app.techvalley.movies.network.TVShowResponse;
 import com.app.techvalley.movies.network.URLConstants;
+import com.app.techvalley.movies.utils.AppUtil;
 import com.app.techvalley.movies.utils.EndlessRecyclerViewScrollListener;
+import com.app.techvalley.movies.utils.GridSpacingItemDecoration;
 import com.app.techvalley.movies.utils.SpacesItemDecoration;
 
 import java.util.ArrayList;
@@ -59,10 +61,9 @@ public class SearchTVShowsActivity extends AppCompatActivity {
         searchBack = findViewById(R.id.searchback);
         data = new ArrayList<>();
 
-        int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.spacing);
         final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, RecyclerView.VERTICAL, false);
+        searchResultsRV.addItemDecoration(new GridSpacingItemDecoration(2, AppUtil.dpToPx(this, 16), true));
         searchResultsRV.setLayoutManager(gridLayoutManager);
-        searchResultsRV.addItemDecoration(new SpacesItemDecoration(spacingInPixels));
         recyclerAdapterSearchTvShows = new RecyclerAdapterSearchTvShows(data, this);
         searchResultsRV.setAdapter(recyclerAdapterSearchTvShows);
 

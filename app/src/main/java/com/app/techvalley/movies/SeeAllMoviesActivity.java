@@ -2,10 +2,12 @@ package com.app.techvalley.movies;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.Toolbar;
+
 import android.transition.Slide;
 import android.view.Gravity;
 
@@ -14,7 +16,9 @@ import com.app.techvalley.movies.models.Movie;
 import com.app.techvalley.movies.network.ApiService;
 import com.app.techvalley.movies.network.MovieResponse;
 import com.app.techvalley.movies.network.URLConstants;
+import com.app.techvalley.movies.utils.AppUtil;
 import com.app.techvalley.movies.utils.EndlessRecyclerViewScrollListener;
+import com.app.techvalley.movies.utils.GridSpacingItemDecoration;
 import com.app.techvalley.movies.utils.SpacesItemDecoration;
 
 import java.util.ArrayList;
@@ -28,7 +32,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class SeeAllMoviesActivity extends AppCompatActivity {
     private EndlessRecyclerViewScrollListener scrollListener;
     RecyclerView recyclerView;
-    RecyclerViewAdapterSeeAllActivity recyclerViewAdpterSeeAllActivity;
+    RecyclerViewAdapterSeeAllActivity adapter;
     ArrayList<Movie> movies;
     String movieType;
 
@@ -53,16 +57,16 @@ public class SeeAllMoviesActivity extends AppCompatActivity {
 
         setTitle(movieType);
 
-        recyclerView = (RecyclerView) findViewById(R.id.seeAllActivityRecyclerViewMovies);
+        recyclerView = findViewById(R.id.seeAllActivityRecyclerViewMovies);
 
         int spacingInPixels = getResources().getDimensionPixelSize(R.dimen.spacing);
         recyclerView.addItemDecoration(new SpacesItemDecoration(spacingInPixels));
 
-        recyclerViewAdpterSeeAllActivity = new RecyclerViewAdapterSeeAllActivity(movies, this);
-        recyclerView.setAdapter(recyclerViewAdpterSeeAllActivity);
-
-        final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
+        adapter = new RecyclerViewAdapterSeeAllActivity(movies, this);
+        final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, RecyclerView.VERTICAL, false);
+        recyclerView.addItemDecoration(new GridSpacingItemDecoration(2, AppUtil.dpToPx(this, 16), true));
         recyclerView.setLayoutManager(gridLayoutManager);
+        recyclerView.setAdapter(adapter);
 
         scrollListener = new EndlessRecyclerViewScrollListener(gridLayoutManager) {
             @Override
@@ -74,13 +78,6 @@ public class SeeAllMoviesActivity extends AppCompatActivity {
         recyclerView.addOnScrollListener(scrollListener);
     }
 
-
-    /*PopularMoviesFragment popularMoviesFragment = new PopularMoviesFragment();
-    Bundle bundle = new Bundle();
-    bundle.putSerializable("ABC", movies);
-    popularMoviesFragment.setArguments(bundle);
-
-    getSupportFragmentManager().beginTransaction().replace(R.id.fragmentContainerSeeAllActivity,popularMoviesFragment).commit();*/
     private void loadMoreData(int page) {
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -103,7 +100,7 @@ public class SeeAllMoviesActivity extends AppCompatActivity {
                     for (Movie obj : movieList) {
                         movies.add(obj);
                     }
-                    recyclerViewAdpterSeeAllActivity.notifyDataSetChanged();
+                    adapter.notifyDataSetChanged();
                 }
 
                 @Override
@@ -124,7 +121,7 @@ public class SeeAllMoviesActivity extends AppCompatActivity {
                     for (Movie obj : movieList) {
                         movies.add(obj);
                     }
-                    recyclerViewAdpterSeeAllActivity.notifyDataSetChanged();
+                    adapter.notifyDataSetChanged();
                 }
 
                 @Override
@@ -146,7 +143,7 @@ public class SeeAllMoviesActivity extends AppCompatActivity {
                     for (Movie obj : movieList) {
                         movies.add(obj);
                     }
-                    recyclerViewAdpterSeeAllActivity.notifyDataSetChanged();
+                    adapter.notifyDataSetChanged();
                 }
 
                 @Override
@@ -160,7 +157,6 @@ public class SeeAllMoviesActivity extends AppCompatActivity {
             call.enqueue(new Callback<MovieResponse>() {
                 @Override
                 public void onResponse(Call<MovieResponse> call, Response<MovieResponse> response) {
-                    //Log.i("ABC2", "FUN");
                     ArrayList<Movie> movieList = response.body().getMovies();
                     if (movieList == null) {
                         return;
@@ -168,7 +164,7 @@ public class SeeAllMoviesActivity extends AppCompatActivity {
                     for (Movie obj : movieList) {
                         movies.add(obj);
                     }
-                    recyclerViewAdpterSeeAllActivity.notifyDataSetChanged();
+                    adapter.notifyDataSetChanged();
                 }
 
                 @Override

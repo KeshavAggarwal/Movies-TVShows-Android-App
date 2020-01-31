@@ -4,7 +4,6 @@
     android:id="@+id/cardView"
     android:layout_width="160dp"
     android:layout_height="280dp"
-    android:layout_marginBottom="8dp"
     app:cardCornerRadius="2dp"
     app:cardPreventCornerOverlap="true">
 

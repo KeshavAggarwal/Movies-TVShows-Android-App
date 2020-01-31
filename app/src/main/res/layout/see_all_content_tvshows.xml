@@ -5,11 +5,8 @@
     android:id="@+id/seeAllActivityRecyclerViewTVShows"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:scrollbars="vertical"
     android:scrollbarStyle="outsideOverlay"
-    android:padding="@dimen/spacing"
+    android:scrollbars="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.app.techvalley.movies.SeeAllMoviesActivity"
     tools:showIn="@layout/see_all_activity_tvshows">

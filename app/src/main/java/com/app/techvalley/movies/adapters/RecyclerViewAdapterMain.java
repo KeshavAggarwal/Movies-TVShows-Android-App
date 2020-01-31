@@ -15,6 +15,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.app.techvalley.movies.AboutMovieActivity;
+import com.app.techvalley.movies.utils.AppUtil;
+import com.app.techvalley.movies.utils.HorizontalItemDecoration;
 import com.app.techvalley.movies.utils.IntentConstants;
 import com.app.techvalley.movies.OnRecyclerViewItemClickListener;
 import com.app.techvalley.movies.R;
@@ -60,11 +62,11 @@ public class RecyclerViewAdapterMain extends RecyclerView.Adapter<RecyclerViewAd
                         mContext.startActivity(intent, bundle);
                     });
                     recyclerViewAdapter = new RecyclerViewAdapter(mMovies[position].getMovies(), mContext);
+                    LinearLayoutManager horizontalManager = new LinearLayoutManager(mContext, RecyclerView.HORIZONTAL, false);
+                    holder.horizontalRecyclerView.addItemDecoration(new HorizontalItemDecoration(AppUtil.dpToPx(mContext, 2), AppUtil.dpToPx(mContext, 2), AppUtil.dpToPx(mContext, 2)));
+                    holder.horizontalRecyclerView.setLayoutManager(horizontalManager);
                     holder.horizontalRecyclerView.setAdapter(recyclerViewAdapter);
                     recyclerViewAdapter.setOnItemClickListener(this, position);
-
-                    LinearLayoutManager horizontalManager = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
-                    holder.horizontalRecyclerView.setLayoutManager(horizontalManager);
                 }
 
             } else if (getItemViewType(position) == 1) {
@@ -81,11 +83,11 @@ public class RecyclerViewAdapterMain extends RecyclerView.Adapter<RecyclerViewAd
 
                     });
                     recyclerViewAdapter = new RecyclerViewAdapter(mMovies[position].getMovies(), mContext);
+                    LinearLayoutManager horizontalManager = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
+                    holder.horizontalRecyclerView.addItemDecoration(new HorizontalItemDecoration(AppUtil.dpToPx(mContext, 2), AppUtil.dpToPx(mContext, 2), AppUtil.dpToPx(mContext, 2)));
+                    holder.horizontalRecyclerView.setLayoutManager(horizontalManager);
                     holder.horizontalRecyclerView.setAdapter(recyclerViewAdapter);
                     recyclerViewAdapter.setOnItemClickListener(this, position);
-
-                    LinearLayoutManager horizontalManager = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
-                    holder.horizontalRecyclerView.setLayoutManager(horizontalManager);
                 }
 
             } else if (getItemViewType(position) == 2) {
@@ -102,11 +104,11 @@ public class RecyclerViewAdapterMain extends RecyclerView.Adapter<RecyclerViewAd
 
                     });
                     recyclerViewAdapter = new RecyclerViewAdapter(mMovies[position].getMovies(), mContext);
+                    LinearLayoutManager horizontalManager = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
+                    holder.horizontalRecyclerView.addItemDecoration(new HorizontalItemDecoration(AppUtil.dpToPx(mContext, 2), AppUtil.dpToPx(mContext, 2), AppUtil.dpToPx(mContext, 2)));
+                    holder.horizontalRecyclerView.setLayoutManager(horizontalManager);
                     holder.horizontalRecyclerView.setAdapter(recyclerViewAdapter);
                     recyclerViewAdapter.setOnItemClickListener(this, position);
-
-                    LinearLayoutManager horizontalManager = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
-                    holder.horizontalRecyclerView.setLayoutManager(horizontalManager);
                 }
             } else if (getItemViewType(position) == 3) {
                 if (mMovies[position] != null) {
@@ -122,11 +124,11 @@ public class RecyclerViewAdapterMain extends RecyclerView.Adapter<RecyclerViewAd
 
                     });
                     recyclerViewAdapter = new RecyclerViewAdapter(mMovies[position].getMovies(), mContext);
+                    LinearLayoutManager horizontalManager = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
+                    holder.horizontalRecyclerView.addItemDecoration(new HorizontalItemDecoration(AppUtil.dpToPx(mContext, 2), AppUtil.dpToPx(mContext, 2), AppUtil.dpToPx(mContext, 2)));
+                    holder.horizontalRecyclerView.setLayoutManager(horizontalManager);
                     holder.horizontalRecyclerView.setAdapter(recyclerViewAdapter);
                     recyclerViewAdapter.setOnItemClickListener(this, position);
-
-                    LinearLayoutManager horizontalManager = new LinearLayoutManager(mContext, LinearLayoutManager.HORIZONTAL, false);
-                    holder.horizontalRecyclerView.setLayoutManager(horizontalManager);
                 }
 
             }

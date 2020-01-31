@@ -4,8 +4,6 @@
     android:id="@+id/cardView"
     android:layout_width="140dp"
     android:layout_height="300dp"
-    android:layout_marginStart="5dp"
-    android:layout_marginLeft="5dp"
     android:elevation="2dp"
     app:cardCornerRadius="2dp"
     app:cardPreventCornerOverlap="false"

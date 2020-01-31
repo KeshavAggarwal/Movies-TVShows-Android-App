@@ -2,10 +2,12 @@ package com.app.techvalley.movies;
 
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.widget.Toolbar;
+
 import android.transition.Slide;
 import android.view.Gravity;
 
@@ -14,7 +16,9 @@ import com.app.techvalley.movies.models.TVShow;
 import com.app.techvalley.movies.network.ApiService;
 import com.app.techvalley.movies.network.TVShowResponse;
 import com.app.techvalley.movies.network.URLConstants;
+import com.app.techvalley.movies.utils.AppUtil;
 import com.app.techvalley.movies.utils.EndlessRecyclerViewScrollListener;
+import com.app.techvalley.movies.utils.GridSpacingItemDecoration;
 import com.app.techvalley.movies.utils.SpacesItemDecoration;
 
 import java.util.ArrayList;
@@ -60,10 +64,10 @@ public class SeeAllTVShowsActivity extends AppCompatActivity {
         recyclerView.addItemDecoration(new SpacesItemDecoration(spacingInPixels));
 
         recyclerAdapterSeeAllTvshows = new RecyclerAdapterSeeAllTvshows(tvShows, this);
-        recyclerView.setAdapter(recyclerAdapterSeeAllTvshows);
-
-        final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
+        final GridLayoutManager gridLayoutManager = new GridLayoutManager(this, 2, RecyclerView.VERTICAL, false);
+        recyclerView.addItemDecoration(new GridSpacingItemDecoration(2, AppUtil.dpToPx(this, 16), true));
         recyclerView.setLayoutManager(gridLayoutManager);
+        recyclerView.setAdapter(recyclerAdapterSeeAllTvshows);
 
         scrollListener = new EndlessRecyclerViewScrollListener(gridLayoutManager) {
             @Override

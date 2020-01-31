@@ -2,10 +2,12 @@ package com.app.techvalley.movies.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +17,8 @@ import com.app.techvalley.movies.R;
 import com.app.techvalley.movies.models.TVShowsCreaters;
 import com.app.techvalley.movies.models.Trailer;
 import com.app.techvalley.movies.adapters.RecyclerAdapterTVShowTrailer;
+import com.app.techvalley.movies.utils.AppUtil;
+import com.app.techvalley.movies.utils.HorizontalItemDecoration;
 
 import java.util.ArrayList;
 
@@ -84,12 +88,11 @@ public class InfoAboutTVShowFragment extends Fragment {
                     noReviewTextView.setVisibility(View.VISIBLE);
                     noReviewTextView.setText("No Trailers are currently available.");
                 } else {
-
-                    recyclerAdapterTVShowTrailer = new RecyclerAdapterTVShowTrailer(mainTrailerTvShowsThumbnails, context);
-                    trailorsRecyclerView.setAdapter(recyclerAdapterTVShowTrailer);
-
                     LinearLayoutManager HorizontalManager = new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false);
                     trailorsRecyclerView.setLayoutManager(HorizontalManager);
+                    trailorsRecyclerView.addItemDecoration(new HorizontalItemDecoration(AppUtil.dpToPx(context, 16), AppUtil.dpToPx(context, 6), AppUtil.dpToPx(context, 16)));
+                    recyclerAdapterTVShowTrailer = new RecyclerAdapterTVShowTrailer(mainTrailerTvShowsThumbnails, context);
+                    trailorsRecyclerView.setAdapter(recyclerAdapterTVShowTrailer);
                 }
 
             }
