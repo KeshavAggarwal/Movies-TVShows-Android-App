@@ -16,6 +16,7 @@
         android:id="@+id/noCastTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/proximanova_regular_webfont"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="@dimen/activity_vertical_margin"

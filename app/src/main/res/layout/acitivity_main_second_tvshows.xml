@@ -8,29 +8,30 @@
         android:id="@+id/tvShowTypeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/proximanova_semibold_webfont"
         android:textColor="@android:color/black"
-        android:textSize="19sp" />
+        android:textSize="18sp" />
 
     <TextView
+        android:id="@+id/seeAllTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:padding="8dp"
-        android:layout_alignParentEnd="true"
         android:layout_alignBaseline="@+id/tvShowTypeTextView"
+        android:fontFamily="@font/proximanova_regular_webfont"
+        android:layout_alignParentEnd="true"
         android:layout_marginEnd="16dp"
-        android:id="@+id/seeAllTextView" />
+        android:padding="8dp"/>
 
 
     <androidx.recyclerview.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/activityMainRecyclerViewHorizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
         android:layout_below="@id/tvShowTypeTextView"
+        android:layout_marginBottom="15dp"
         android:orientation="horizontal" />
 
 </RelativeLayout>

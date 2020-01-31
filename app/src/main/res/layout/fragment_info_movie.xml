@@ -22,6 +22,7 @@
             android:id="@+id/aboutFilmTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/proximanova_regular_webfont"
             android:layout_below="@+id/aboutTheFilmTextViewLabel"
             android:layout_marginEnd="@dimen/activity_horizontal_margin"
             android:layout_marginStart="@dimen/activity_horizontal_margin"
@@ -62,6 +63,7 @@
             android:id="@+id/budgetTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/proximanova_regular_webfont"
             android:layout_alignBaseline="@+id/budgetTextViewLabel"
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@+id/budgetTextViewLabel" />
@@ -81,6 +83,7 @@
             android:id="@+id/revenueTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/proximanova_regular_webfont"
             android:layout_alignBaseline="@+id/revenueTextViewLabel"
             android:layout_marginStart="5dp"
             android:layout_toEndOf="@+id/revenueTextViewLabel" />
@@ -106,6 +109,7 @@
         <TextView
             android:id="@+id/noReviewMovieTextView"
             android:layout_width="wrap_content"
+            android:fontFamily="@font/proximanova_regular_webfont"
             android:layout_height="wrap_content"
             android:layout_below="@id/trailorsTextLabel"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -131,6 +135,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="16dp"
             android:clickable="true"
+            android:fontFamily="@font/proximanova_regular_webfont"
             android:padding="7dp"
             android:text="See all" />
 
@@ -145,6 +150,7 @@
             android:id="@+id/noSimilarMoviesTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/proximanova_regular_webfont"
             android:layout_below="@id/similarMoviesTextLabel"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="5dp"
