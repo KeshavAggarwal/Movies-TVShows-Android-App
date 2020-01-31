@@ -100,8 +100,9 @@
                 android:layout_marginBottom="98dp"
                 android:background="@drawable/text_view_border"
                 android:elevation="6dp"
+                android:fontFamily="@font/proximanova_regular_webfont"
                 android:text="Movies"
-                android:textColor="@android:color/black"
+                android:textColor="@color/text1"
                 android:textSize="15dp"
                 android:visibility="invisible" />
 
@@ -113,10 +114,11 @@
                 android:layout_gravity="bottom|end"
                 android:layout_marginRight="85dp"
                 android:layout_marginBottom="168dp"
+                android:fontFamily="@font/proximanova_regular_webfont"
                 android:background="@drawable/text_view_border"
                 android:elevation="6dp"
                 android:text="TVShows"
-                android:textColor="@android:color/black"
+                android:textColor="@color/text1"
                 android:visibility="invisible" />
         </FrameLayout>
     </androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -24,9 +24,9 @@
             android:layout_marginStart="80dp"
             android:layout_marginLeft="80dp"
             android:layout_marginTop="16dp"
-            android:textColor="@android:color/black"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/proximanova_semibold_webfont"
+            android:textColor="@color/text1"
+            android:textSize="18dp" />
 
         <TextView
             android:id="@+id/circleTV"
@@ -35,9 +35,10 @@
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/circle_text_view"
+            android:fontFamily="@font/proximanova_regular_webfont"
             android:gravity="center"
             android:textAllCaps="true"
-            android:textColor="@android:color/black"
+            android:textColor="@color/text1"
             android:textSize="20dp" />
 
         <TextView
@@ -45,7 +46,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/reviewHeadingTV"
-            android:layout_alignStart="@+id/reviewHeadingTV" />
+            android:layout_alignStart="@+id/reviewHeadingTV"
+            android:textColor="@color/subtext1"
+            android:fontFamily="@font/proximanova_regular_webfont" />
 
         <TextView
             android:id="@+id/reviewsTextView"
@@ -57,10 +60,11 @@
             android:layout_marginTop="13dp"
             android:layout_marginEnd="10dp"
             android:ellipsize="end"
+            android:fontFamily="@font/proximanova_regular_webfont"
             android:lineSpacingExtra="2.5dp"
             android:maxLines="9"
             android:minLines="1"
-            android:textSize="14dp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/readMoreTV"
@@ -73,9 +77,10 @@
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="16dp"
             android:clickable="true"
+            android:fontFamily="@font/proximanova_regular_webfont"
             android:padding="6dp"
             android:textAllCaps="true"
-            android:textColor="@android:color/black"
+            android:textColor="@color/text1"
             android:textSize="14dp"
             android:visibility="invisible" />
     </RelativeLayout>

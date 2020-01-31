@@ -24,13 +24,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/thumbnailIV"
-            android:layout_marginTop="5dp"
-            android:gravity="left"
             android:layout_marginLeft="4dp"
+            android:layout_marginTop="5dp"
             android:layout_marginRight="4dp"
-            android:maxLines="2"
             android:ellipsize="end"
-            android:textColor="@android:color/black" />
+            android:fontFamily="@font/proximanova_regular_webfont"
+            android:gravity="left"
+            android:maxLines="2"
+            android:textColor="@color/text1" />
 
         <TextView
             android:id="@+id/releaseDateTV"
@@ -38,7 +39,9 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/nameTV"
             android:layout_marginLeft="4dp"
-            android:textSize="12sp"  />
+            android:textColor="@color/subtext1"
+            android:fontFamily="@font/proximanova_regular_webfont"
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/ratingTV"
@@ -48,8 +51,9 @@
             android:layout_marginBottom="5dp"
             android:drawableRight="@drawable/ic_star"
             android:drawablePadding="3dp"
+            android:fontFamily="@font/proximanova_regular_webfont"
             android:paddingLeft="4dp"
-            android:textColor="@android:color/black"
+            android:textColor="@color/text1"
             android:textSize="12sp" />
 
 

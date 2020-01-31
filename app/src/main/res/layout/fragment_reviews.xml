@@ -19,5 +19,6 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:textSize="19dp"
+        android:fontFamily="@font/proximanova_regular_webfont"
         android:visibility="invisible" />
 </RelativeLayout>

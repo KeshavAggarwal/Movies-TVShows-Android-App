@@ -48,9 +48,9 @@
                     android:id="@+id/posterWithBannerImageView"
                     android:layout_width="100dp"
                     android:layout_height="155dp"
-                    android:layout_marginBottom="15dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="230dp"
+                    android:layout_marginBottom="15dp"
                     android:fitsSystemWindows="true"
                     android:scaleType="fitXY"
                     android:transitionName="posterImageTransition"
@@ -64,6 +64,7 @@
                     android:layout_marginTop="264dp"
                     android:layout_toRightOf="@+id/posterWithBannerImageView"
                     android:drawableLeft="@drawable/ic_dot_single"
+                    android:fontFamily="@font/proximanova_regular_webfont"
                     android:textColor="@android:color/white" />
 
                 <TextView
@@ -73,16 +74,18 @@
                     android:layout_alignBaseline="@+id/releaseDateTextView"
                     android:layout_toRightOf="@+id/releaseDateTextView"
                     android:drawableLeft="@drawable/ic_dot_single"
+                    android:fontFamily="@font/proximanova_regular_webfont"
                     android:textColor="@android:color/white" />
 
                 <TextView
                     android:id="@+id/tvShowNameTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/releaseDateTextView"
-                    android:layout_alignStart="@+id/releaseDateTextView"
                     android:layout_below="@+id/releaseDateTextView"
+                    android:layout_alignStart="@+id/releaseDateTextView"
+                    android:layout_alignLeft="@+id/releaseDateTextView"
                     android:layout_marginTop="1dp"
+                    android:fontFamily="@font/proximanova_regular_webfont"
                     android:textColor="@android:color/white"
                     android:textSize="22dp"
                     android:textStyle="bold" />
@@ -91,10 +94,11 @@
                     android:id="@+id/tvShowgenreTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/tvShowNameTextView"
-                    android:layout_alignStart="@+id/tvShowNameTextView"
                     android:layout_below="@+id/tvShowNameTextView"
+                    android:layout_alignStart="@+id/tvShowNameTextView"
+                    android:layout_alignLeft="@+id/tvShowNameTextView"
                     android:layout_marginTop="5dp"
+                    android:fontFamily="@font/proximanova_regular_webfont"
                     android:textColor="@android:color/white" />
 
                 <androidx.appcompat.widget.Toolbar

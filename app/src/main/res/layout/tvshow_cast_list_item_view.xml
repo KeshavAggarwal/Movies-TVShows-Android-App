@@ -19,7 +19,8 @@
         android:layout_centerInParent="true"
         android:layout_marginStart="5dp"
         android:layout_toEndOf="@id/castIV"
-        android:textColor="@android:color/black" />
+        android:fontFamily="@font/proximanova_regular_webfont"
+        android:textColor="@color/text1" />
 
     <TextView
         android:id="@+id/castCharacterTV"
@@ -28,6 +29,8 @@
         android:layout_centerInParent="true"
         android:layout_marginStart="25dp"
         android:layout_toRightOf="@+id/castNameTV"
+        android:fontFamily="@font/proximanova_regular_webfont"
+        android:textColor="@color/subtext1"
         android:textStyle="italic" />
 
     <View

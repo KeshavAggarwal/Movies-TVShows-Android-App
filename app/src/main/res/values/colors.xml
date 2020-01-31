@@ -5,4 +5,10 @@
     <color name="colorAccent">#FFD740</color>
 
     <color name="black_overlay">#66000000</color>
+
+    <color name="text1">#263238</color>
+    <color name="text2">#455a64</color>
+    <color name="subtext1">#78909c</color>
+    <color name="subtext2">#b0bec5</color>
+
 </resources>
