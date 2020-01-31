@@ -161,7 +161,6 @@ public class RecyclerViewAdapterMain extends RecyclerView.Adapter<RecyclerViewAd
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView movieType;
         RecyclerView horizontalRecyclerView;
-        View divider;
         TextView seeAlltextView;
 
         public ViewHolder(View itemView) {
@@ -169,8 +168,6 @@ public class RecyclerViewAdapterMain extends RecyclerView.Adapter<RecyclerViewAd
             movieType = itemView.findViewById(R.id.movieTypeTextView);
             seeAlltextView = itemView.findViewById(R.id.seeAllTextView);
             horizontalRecyclerView = itemView.findViewById(R.id.activityMainRecyclerViewHorizontal);
-            divider = itemView.findViewById(R.id.activityMainDivider);
-
         }
     }
 

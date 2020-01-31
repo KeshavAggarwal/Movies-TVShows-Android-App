@@ -15,7 +15,7 @@
             android:layout_marginStart="@dimen/activity_horizontal_margin"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:text="About the Show"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:textColor="@android:color/black" />
 
         <TextView
@@ -31,7 +31,7 @@
         <TextView
             android:id="@+id/firstAirDateLabel"
             android:layout_width="wrap_content"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:layout_height="wrap_content"
             android:layout_below="@id/aboutTvShowTextView"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/firstAirDateLabel"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:layout_marginTop="10dp"
             android:text="Last Air Date:"
             android:textColor="@android:color/black" />
@@ -70,7 +70,7 @@
             android:id="@+id/createdByLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:layout_below="@+id/lastAirDateLabel"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="10dp"
@@ -93,7 +93,7 @@
             android:layout_below="@+id/createdByLabel"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="10dp"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:text="Show Type:"
             android:textColor="@android:color/black" />
 
@@ -110,7 +110,7 @@
             android:id="@+id/showStatusLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:layout_below="@+id/showTypeLabel"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="10dp"
@@ -129,7 +129,7 @@
             android:id="@+id/trailorsTvShowTextLabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="16dp"
+            android:textSize="16sp"
             android:layout_below="@+id/showStatusLabel"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginTop="20dp"

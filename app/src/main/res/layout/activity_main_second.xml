@@ -34,14 +34,6 @@
         android:layout_below="@id/movieTypeTextView"
         android:orientation="horizontal" />
 
-    <View
-        android:id="@+id/activityMainDivider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_below="@+id/activityMainRecyclerViewHorizontal"
-        android:layout_marginBottom="5dp"
-        android:background="#31C7C7CC" />
-
 
 </RelativeLayout>
 

@@ -5,7 +5,7 @@
     android:layout_width="160dp"
     android:layout_height="280dp"
     android:layout_marginBottom="8dp"
-    app:cardCornerRadius="0dp"
+    app:cardCornerRadius="2dp"
     app:cardPreventCornerOverlap="true">
 
     <RelativeLayout
@@ -26,9 +26,11 @@
             android:layout_below="@+id/thumbnailIV"
             android:layout_marginTop="5dp"
             android:gravity="left"
-            android:paddingLeft="5dp"
-            android:textColor="@android:color/black"
-            android:textSize="15sp" />
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@android:color/black"/>
 
         <TextView
             android:id="@+id/releaseDateTV"
@@ -36,7 +38,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/nameTV"
             android:layout_marginTop="1dp"
-            android:paddingLeft="5dp"
+            android:layout_marginLeft="4dp"
             android:textSize="12sp" />
 
         <TextView
@@ -49,7 +51,7 @@
             android:drawablePadding="3dp"
             android:paddingLeft="4dp"
             android:textColor="@android:color/black"
-            android:textSize="14sp" />
+            android:textSize="12sp" />
 
 
     </RelativeLayout>

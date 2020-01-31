@@ -48,17 +48,14 @@ public class RecyclerViewAdapterTVShow extends RecyclerView.Adapter<RecyclerView
             if (getItemViewType(position) == 0) {
                 if (mTVShows[position] != null) {
                     holder.tvShowType.setText("Airing Today");
-                    holder.seeAlltextView.setText("See all >");
-                    holder.seeAlltextView.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent();
-                            Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle();
-                            intent.putExtra("ABCD", mTVShows[position].getTvShows());
-                            intent.putExtra("TVSHOW_TYPE", "Airing Today");
-                            intent.setClass(mContext, SeeAllTVShowsActivity.class);
-                            mContext.startActivity(intent, bundle);
-                        }
+                    holder.seeAlltextView.setText("See all");
+                    holder.seeAlltextView.setOnClickListener(v -> {
+                        Intent intent = new Intent();
+                        Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle();
+                        intent.putExtra("ABCD", mTVShows[position].getTvShows());
+                        intent.putExtra("TVSHOW_TYPE", "Airing Today");
+                        intent.setClass(mContext, SeeAllTVShowsActivity.class);
+                        mContext.startActivity(intent, bundle);
                     });
                     recyclerViewAdapter = new RecyclerViewAdapterTVShowHorizontal(mTVShows[position].getTvShows(), mContext);
                     holder.horizontalRecyclerView.setAdapter(recyclerViewAdapter);
@@ -71,18 +68,15 @@ public class RecyclerViewAdapterTVShow extends RecyclerView.Adapter<RecyclerView
             } else if (getItemViewType(position) == 1) {
                 if (mTVShows[position] != null) {
                     holder.tvShowType.setText("On Air");
-                    holder.seeAlltextView.setText("See all >");
-                    holder.seeAlltextView.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent();
-                            Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle();
-                            intent.setClass(mContext, SeeAllTVShowsActivity.class);
-                            intent.putExtra("ABCD", mTVShows[position].getTvShows());
-                            intent.putExtra("TVSHOW_TYPE", "On Air");
-                            mContext.startActivity(intent, bundle);
+                    holder.seeAlltextView.setText("See all");
+                    holder.seeAlltextView.setOnClickListener(v -> {
+                        Intent intent = new Intent();
+                        Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle();
+                        intent.setClass(mContext, SeeAllTVShowsActivity.class);
+                        intent.putExtra("ABCD", mTVShows[position].getTvShows());
+                        intent.putExtra("TVSHOW_TYPE", "On Air");
+                        mContext.startActivity(intent, bundle);
 
-                        }
                     });
                     recyclerViewAdapter = new RecyclerViewAdapterTVShowHorizontal(mTVShows[position].getTvShows(), mContext);
                     holder.horizontalRecyclerView.setAdapter(recyclerViewAdapter);
@@ -95,18 +89,15 @@ public class RecyclerViewAdapterTVShow extends RecyclerView.Adapter<RecyclerView
             } else if (getItemViewType(position) == 2) {
                 if (mTVShows[position] != null) {
                     holder.tvShowType.setText("Popular Shows");
-                    holder.seeAlltextView.setText("See all >");
-                    holder.seeAlltextView.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent();
-                            Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle();
-                            intent.putExtra("ABCD", mTVShows[position].getTvShows());
-                            intent.putExtra("TVSHOW_TYPE", "Popular Shows");
-                            intent.setClass(mContext, SeeAllTVShowsActivity.class);
-                            mContext.startActivity(intent, bundle);
+                    holder.seeAlltextView.setText("See all");
+                    holder.seeAlltextView.setOnClickListener(v -> {
+                        Intent intent = new Intent();
+                        Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle();
+                        intent.putExtra("ABCD", mTVShows[position].getTvShows());
+                        intent.putExtra("TVSHOW_TYPE", "Popular Shows");
+                        intent.setClass(mContext, SeeAllTVShowsActivity.class);
+                        mContext.startActivity(intent, bundle);
 
-                        }
                     });
                     recyclerViewAdapter = new RecyclerViewAdapterTVShowHorizontal(mTVShows[position].getTvShows(), mContext);
                     holder.horizontalRecyclerView.setAdapter(recyclerViewAdapter);
@@ -118,18 +109,15 @@ public class RecyclerViewAdapterTVShow extends RecyclerView.Adapter<RecyclerView
             } else if (getItemViewType(position) == 3) {
                 if (mTVShows[position] != null) {
                     holder.tvShowType.setText("Top Rated Shows");
-                    holder.seeAlltextView.setText("See all >");
-                    holder.seeAlltextView.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent();
-                            Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle();
-                            intent.putExtra("ABCD", mTVShows[position].getTvShows());
-                            intent.putExtra("TVSHOW_TYPE", "Top Rated Shows");
-                            intent.setClass(mContext, SeeAllTVShowsActivity.class);
-                            mContext.startActivity(intent, bundle);
+                    holder.seeAlltextView.setText("See all");
+                    holder.seeAlltextView.setOnClickListener(v -> {
+                        Intent intent = new Intent();
+                        Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle();
+                        intent.putExtra("ABCD", mTVShows[position].getTvShows());
+                        intent.putExtra("TVSHOW_TYPE", "Top Rated Shows");
+                        intent.setClass(mContext, SeeAllTVShowsActivity.class);
+                        mContext.startActivity(intent, bundle);
 
-                        }
                     });
                     recyclerViewAdapter = new RecyclerViewAdapterTVShowHorizontal(mTVShows[position].getTvShows(), mContext);
                     holder.horizontalRecyclerView.setAdapter(recyclerViewAdapter);
@@ -170,7 +158,6 @@ public class RecyclerViewAdapterTVShow extends RecyclerView.Adapter<RecyclerView
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvShowType;
         RecyclerView horizontalRecyclerView;
-        View divider;
         TextView seeAlltextView;
 
 
@@ -179,8 +166,6 @@ public class RecyclerViewAdapterTVShow extends RecyclerView.Adapter<RecyclerView
             tvShowType = itemView.findViewById(R.id.tvShowTypeTextView);
             seeAlltextView = itemView.findViewById(R.id.seeAllTextView);
             horizontalRecyclerView = itemView.findViewById(R.id.activityMainRecyclerViewHorizontal);
-            divider = itemView.findViewById(R.id.activityMainDivider);
-
         }
     }
 
