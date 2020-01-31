@@ -24,22 +24,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="250dp">
 
-                <ProgressBar
-                    android:id="@+id/progressBarBannerViewPager"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:indeterminate="true"
-                    android:indeterminateTint="?android:colorAccent"
-                    android:indeterminateTintMode="src_in"
-                    android:visibility="gone" />
-
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/pager"
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
                     android:background="@android:color/white"
-                    app:layout_scrollFlags="scroll"/>
+                    app:layout_scrollFlags="scroll" />
 
                 <RadioGroup
                     android:id="@+id/radioGroup"
@@ -58,9 +48,9 @@
                     android:id="@+id/posterWithBannerImageView"
                     android:layout_width="100dp"
                     android:layout_height="155dp"
-                    android:layout_marginBottom="15dp"
                     android:layout_marginLeft="15dp"
                     android:layout_marginTop="230dp"
+                    android:layout_marginBottom="15dp"
                     android:fitsSystemWindows="true"
                     android:scaleType="fitXY"
                     android:transitionName="posterImageTransition"
@@ -89,9 +79,9 @@
                     android:id="@+id/nameTextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/releaseDateTextView"
-                    android:layout_alignStart="@+id/releaseDateTextView"
                     android:layout_below="@+id/releaseDateTextView"
+                    android:layout_alignStart="@+id/releaseDateTextView"
+                    android:layout_alignLeft="@+id/releaseDateTextView"
                     android:layout_marginTop="1dp"
                     android:textColor="@android:color/white"
                     android:textSize="22dp"
@@ -101,9 +91,9 @@
                     android:id="@+id/genreTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignLeft="@+id/nameTextView"
-                    android:layout_alignStart="@+id/nameTextView"
                     android:layout_below="@+id/nameTextView"
+                    android:layout_alignStart="@+id/nameTextView"
+                    android:layout_alignLeft="@+id/nameTextView"
                     android:layout_marginTop="5dp"
                     android:textColor="@android:color/white" />
 

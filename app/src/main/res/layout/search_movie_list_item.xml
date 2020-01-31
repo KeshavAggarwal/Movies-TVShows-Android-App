@@ -28,7 +28,7 @@
             android:gravity="left"
             android:paddingLeft="5dp"
             android:textColor="@android:color/black"
-            android:textSize="15dp" />
+            android:textSize="15sp" />
 
         <TextView
             android:id="@+id/releaseDateTV"
@@ -37,7 +37,7 @@
             android:layout_below="@id/nameTV"
             android:layout_marginTop="1dp"
             android:paddingLeft="5dp"
-            android:textSize="12dp" />
+            android:textSize="12sp" />
 
         <TextView
             android:id="@+id/ratingTV"
@@ -45,11 +45,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="5dp"
-            android:drawablePadding="3dp"
             android:drawableRight="@drawable/ic_star"
+            android:drawablePadding="3dp"
             android:paddingLeft="4dp"
             android:textColor="@android:color/black"
-            android:textSize="14dp" />
+            android:textSize="14sp" />
 
 
     </RelativeLayout>

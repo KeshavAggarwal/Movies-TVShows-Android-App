@@ -1,18 +1,20 @@
 package com.app.techvalley.movies.adapters;
 
 import android.content.Context;
+
 import androidx.viewpager.widget.PagerAdapter;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 
 import com.app.techvalley.movies.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by KeshavAggarwal on 19/01/17.
@@ -21,14 +23,11 @@ import java.util.ArrayList;
 public class BannerViewPagerAdapter extends PagerAdapter {
 
     Context mContext;
-    ArrayList<String> mAllBannerImageFullLinks;
-    ProgressBar progressBar;
-    //LayoutInflaterCompat layoutInflator;
+    private List<String> mAllBannerImageFullLinks;
 
     public BannerViewPagerAdapter(Context context, ArrayList<String> allBannerImageFullLinks) {
         mContext = context;
         mAllBannerImageFullLinks = allBannerImageFullLinks;
-
     }
 
     @Override
@@ -53,7 +52,11 @@ public class BannerViewPagerAdapter extends PagerAdapter {
         Picasso.get().load(mAllBannerImageFullLinks.get(position)).into(bannerImage);
         container.addView(v);
         return v;
+    }
 
+    public void refreshBannerUrls(List<String> list) {
+        this.mAllBannerImageFullLinks = list;
+        notifyDataSetChanged();
     }
 }
 

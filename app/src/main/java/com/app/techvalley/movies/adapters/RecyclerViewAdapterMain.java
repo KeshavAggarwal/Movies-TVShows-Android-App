@@ -5,8 +5,10 @@ import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,17 +50,14 @@ public class RecyclerViewAdapterMain extends RecyclerView.Adapter<RecyclerViewAd
             if (getItemViewType(position) == 0) {
                 if (mMovies[position] != null) {
                     holder.movieType.setText("Popular Movies");
-                    holder.seeAlltextView.setText("See all >");
-                    holder.seeAlltextView.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent();
-                            Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle();
-                            intent.putExtra("ABCD", mMovies[position].getMovies());
-                            intent.putExtra("MOVIETYPE", "Popular Movies");
-                            intent.setClass(mContext, SeeAllMoviesActivity.class);
-                            mContext.startActivity(intent, bundle);
-                        }
+                    holder.seeAlltextView.setText("See all");
+                    holder.seeAlltextView.setOnClickListener(v -> {
+                        Intent intent = new Intent();
+                        Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle();
+                        intent.putExtra("ABCD", mMovies[position].getMovies());
+                        intent.putExtra("MOVIETYPE", "Popular Movies");
+                        intent.setClass(mContext, SeeAllMoviesActivity.class);
+                        mContext.startActivity(intent, bundle);
                     });
                     recyclerViewAdapter = new RecyclerViewAdapter(mMovies[position].getMovies(), mContext);
                     holder.horizontalRecyclerView.setAdapter(recyclerViewAdapter);
@@ -71,18 +70,15 @@ public class RecyclerViewAdapterMain extends RecyclerView.Adapter<RecyclerViewAd
             } else if (getItemViewType(position) == 1) {
                 if (mMovies[position] != null) {
                     holder.movieType.setText("Now Playing");
-                    holder.seeAlltextView.setText("See all >");
-                    holder.seeAlltextView.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent();
-                            Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle();
-                            intent.setClass(mContext, SeeAllMoviesActivity.class);
-                            intent.putExtra("ABCD", mMovies[position].getMovies());
-                            intent.putExtra("MOVIETYPE", "Now Playing");
-                            mContext.startActivity(intent, bundle);
+                    holder.seeAlltextView.setText("See all");
+                    holder.seeAlltextView.setOnClickListener(v -> {
+                        Intent intent = new Intent();
+                        Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle();
+                        intent.setClass(mContext, SeeAllMoviesActivity.class);
+                        intent.putExtra("ABCD", mMovies[position].getMovies());
+                        intent.putExtra("MOVIETYPE", "Now Playing");
+                        mContext.startActivity(intent, bundle);
 
-                        }
                     });
                     recyclerViewAdapter = new RecyclerViewAdapter(mMovies[position].getMovies(), mContext);
                     holder.horizontalRecyclerView.setAdapter(recyclerViewAdapter);
@@ -95,18 +91,15 @@ public class RecyclerViewAdapterMain extends RecyclerView.Adapter<RecyclerViewAd
             } else if (getItemViewType(position) == 2) {
                 if (mMovies[position] != null) {
                     holder.movieType.setText("Top Rated Movies");
-                    holder.seeAlltextView.setText("See all >");
-                    holder.seeAlltextView.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent();
-                            Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle();
-                            intent.putExtra("ABCD", mMovies[position].getMovies());
-                            intent.putExtra("MOVIETYPE", "Top Rated Movies");
-                            intent.setClass(mContext, SeeAllMoviesActivity.class);
-                            mContext.startActivity(intent, bundle);
+                    holder.seeAlltextView.setText("See all");
+                    holder.seeAlltextView.setOnClickListener(v -> {
+                        Intent intent = new Intent();
+                        Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle();
+                        intent.putExtra("ABCD", mMovies[position].getMovies());
+                        intent.putExtra("MOVIETYPE", "Top Rated Movies");
+                        intent.setClass(mContext, SeeAllMoviesActivity.class);
+                        mContext.startActivity(intent, bundle);
 
-                        }
                     });
                     recyclerViewAdapter = new RecyclerViewAdapter(mMovies[position].getMovies(), mContext);
                     holder.horizontalRecyclerView.setAdapter(recyclerViewAdapter);
@@ -118,18 +111,15 @@ public class RecyclerViewAdapterMain extends RecyclerView.Adapter<RecyclerViewAd
             } else if (getItemViewType(position) == 3) {
                 if (mMovies[position] != null) {
                     holder.movieType.setText("Upcoming Movies");
-                    holder.seeAlltextView.setText("See all >");
-                    holder.seeAlltextView.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent intent = new Intent();
-                            Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle();
-                            intent.putExtra("ABCD", mMovies[position].getMovies());
-                            intent.putExtra("MOVIETYPE", "Upcoming Movies");
-                            intent.setClass(mContext, SeeAllMoviesActivity.class);
-                            mContext.startActivity(intent, bundle);
+                    holder.seeAlltextView.setText("See all");
+                    holder.seeAlltextView.setOnClickListener(v -> {
+                        Intent intent = new Intent();
+                        Bundle bundle = ActivityOptions.makeSceneTransitionAnimation((Activity) mContext).toBundle();
+                        intent.putExtra("ABCD", mMovies[position].getMovies());
+                        intent.putExtra("MOVIETYPE", "Upcoming Movies");
+                        intent.setClass(mContext, SeeAllMoviesActivity.class);
+                        mContext.startActivity(intent, bundle);
 
-                        }
                     });
                     recyclerViewAdapter = new RecyclerViewAdapter(mMovies[position].getMovies(), mContext);
                     holder.horizontalRecyclerView.setAdapter(recyclerViewAdapter);
@@ -165,7 +155,6 @@ public class RecyclerViewAdapterMain extends RecyclerView.Adapter<RecyclerViewAd
         intent.putExtra(IntentConstants.INTENT_KEY_POSTER_PATH, mMovies[verticalPosition].getMovies().get(horizontalPosition).getPosterPath());
         intent.putExtra(IntentConstants.INTENT_KEY_MOVIE_NAME, mMovies[verticalPosition].getMovies().get(horizontalPosition).getTitle());
         mContext.startActivity(intent, bundle);
-        //Toast.makeText(mContext,mMovies[verticalposition].getMovies().get(horizontalPosition).id + " is clicked", Toast.LENGTH_SHORT).show();
 
     }
 

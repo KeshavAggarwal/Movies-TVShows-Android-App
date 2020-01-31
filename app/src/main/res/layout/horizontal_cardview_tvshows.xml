@@ -4,12 +4,12 @@
     android:id="@+id/cardView"
     android:layout_width="140dp"
     android:layout_height="300dp"
-    android:layout_marginLeft="5dp"
     android:layout_marginStart="5dp"
-    app:cardPreventCornerOverlap="false"
+    android:layout_marginLeft="5dp"
     android:elevation="2dp"
-    app:cardUseCompatPadding="true"
-    app:cardCornerRadius="0dp">
+    app:cardCornerRadius="2dp"
+    app:cardPreventCornerOverlap="false"
+    app:cardUseCompatPadding="true">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -18,41 +18,42 @@
         <ImageView
             android:id="@+id/tvShowThumbnailImageView"
             android:layout_width="match_parent"
-            android:transitionName="posterImageTransition"
             android:layout_height="196dp"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:transitionName="posterImageTransition" />
 
         <TextView
             android:id="@+id/tvShowNameTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="left"
-            android:layout_marginTop="5dp"
-            android:textSize="15dp"
-            android:paddingLeft="5dp"
             android:layout_below="@+id/tvShowThumbnailImageView"
-            android:textColor="@android:color/black" />
+            android:layout_marginTop="5dp"
+            android:gravity="left"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:textColor="@android:color/black"/>
 
         <TextView
+            android:id="@+id/tvShowReleaseDateTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/tvShowReleaseDateTextView"
-            android:paddingLeft="5dp"
-            android:layout_marginTop="1dp"
             android:layout_below="@id/tvShowNameTextView"
-            android:textSize="12dp"/>
+            android:layout_marginLeft="4dp"
+            android:textSize="12sp" />
 
         <TextView
+            android:id="@+id/ratingTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/ratingTextView"
-            android:paddingLeft="4dp"
             android:layout_alignParentBottom="true"
-            android:textColor="@android:color/black"
             android:layout_marginBottom="5dp"
-            android:textSize="14dp"
+            android:drawableRight="@drawable/ic_star"
             android:drawablePadding="3dp"
-            android:drawableRight="@drawable/ic_star"/>
+            android:paddingLeft="4dp"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
 
 
     </RelativeLayout>

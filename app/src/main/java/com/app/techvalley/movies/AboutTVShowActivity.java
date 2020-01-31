@@ -214,7 +214,7 @@ public class AboutTVShowActivity extends AppCompatActivity {
                     } else
                         break;
                 }
-                bannerViewPagerAdapter.notifyDataSetChanged();
+                bannerViewPagerAdapter.refreshBannerUrls(allBannerImageFullLinks);
 
             }
 

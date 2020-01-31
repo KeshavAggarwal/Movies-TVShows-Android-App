@@ -239,7 +239,7 @@ public class AboutMovieActivity extends AppCompatActivity implements InfoAboutMo
                     } else
                         break;
                 }
-                bannerViewPagerAdapter.notifyDataSetChanged();
+                bannerViewPagerAdapter.refreshBannerUrls(allBannerImageFullLinks);
 
             }
 
